@@ -48,6 +48,73 @@ document.addEventListener('click', (e) => {
     }
 });
 
+// Крепим слайдер в место header'а
+
+const header = document.querySelector('header');
+const slider = document.querySelector('.menu__slider-container');
+const anchor = document.querySelector('#menu__anchor');
+
+// Получаем точную высоту хедера динамически (например, 60px или 80px)
+const headerHeight = header.offsetHeight;
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    // Проверяем, ушел ли маяк выше установленной границы хедера
+    if (!entry.isIntersecting && entry.boundingClientRect.top < headerHeight) {
+      header.classList.add('header-hidden');
+      slider.classList.add('is-sticky');
+    } else {
+      header.classList.remove('header-hidden');
+      slider.classList.remove('is-sticky');
+    }
+  });
+}, { 
+  // rootMargin создает виртуальную зону срабатывания. 
+  // Отрицательное значение сверху (например, -60px) заставит JS реагировать ДО того, 
+  // как слайдер доедет до физического верха экрана.
+  rootMargin: `-${headerHeight}px 0px 0px 0px`,
+  threshold: 0 
+});
+
+observer.observe(anchor);
+
+/// Делаем кнопку меню активной в слайдере
+
+// 1. Находим все ссылки в нашем слайдере
+const menuLinks = document.querySelectorAll('.menu__slider-track .menu__category-button');
+
+// 2. Собираем массив ID из атрибутов href (например, ['#burgers', '#pizza', '#salads'])
+const targetIds = Array.from(menuLinks).map(link => link.getAttribute('href'));
+
+// 3. Находим на странице сами заголовки секций по этим ID
+const menuSections = targetIds.map(id => document.querySelector(id)).filter(section => section !== null);
+
+// 4. Настраиваем наблюдатель для секций меню
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    // Если секция (заголовок) появилась в верхней половине экрана
+    if (entry.isIntersecting) {
+      const id = entry.target.getAttribute('id');
+      
+      // Переключаем класс active у ссылок
+      menuLinks.forEach(link => {
+        if (link.getAttribute('href') === `#${id}`) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    }
+  });
+}, {
+  // Ищем пересечение в верхней части экрана (приблизительно там, где висит наш липкий слайдер)
+  rootMargin: '-15% 0px -75% 0px', 
+  threshold: 0
+});
+
+// 5. Запускаем слежку за каждым заголовком категории
+menuSections.forEach(section => sectionObserver.observe(section));
+
 // Работа с модалкой
 document.addEventListener('DOMContentLoaded', () => {
   // Переменная, куда мы сохраним данные после загрузки из файла

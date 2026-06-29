@@ -13,7 +13,7 @@
         <a class="header__logo logo" href="/">
             <img src="./icons/Ё-МАЁ_ЛОГО.webp"
             alt="Логотип"
-              loading="lazy"/>
+            loading="lazy"/>
         </a>
         <nav class="header-menu hidden-mobile">
             <ul class="header__menu-list">
@@ -223,9 +223,86 @@
         </div>
       </section>
       <section class="section" id="kitchen">
-        <div class="container" >
+        <div class="container">
           <div>
-              <h3 class="section__title">Бургеры</h3><!--Заголовок категорий блюд-->
+              <div id="menu__anchor"></div>
+              <div class="menu__slider-container">
+                <div class="menu__slider-track">
+                  <!-- Категория: Бургеры -->
+                  <a class="menu__category-button active" href="#burgers">
+                    <span class="category-icon">
+                      <svg viewBox="0 0 24 24" width="24" height="24">
+                        <!-- Пример простой SVG-иконки бургера -->
+                        <path fill="currentColor" d="M21 11c0-3.87-3.13-7-7-7s-7 3.13-7 7H21m-9 10c3.87 0 7-3.13 7-7H7c0 3.87 3.13 7 7 7z"/>
+                      </svg>
+                    </span>
+                    <span class="category-name">Бургеры</span>
+                  </a>
+                  <!-- Категория: Пицца -->
+                  <a class="menu__category-button" href="#pizza">
+                    <span class="category-icon">
+                      <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L13 16.12v3.81zm5.66-3.75l-1.31-1.31c.32-.57.53-1.2.61-1.87h2.02c-.11 1.22-.58 2.35-1.32 3.18z"/>
+                      </svg>
+                    </span>
+                    <span class="category-name">Пицца</span>
+                  </a>
+                  <!-- Категория: Паста -->
+                   <a class="menu__category-button" href="#pasta">
+                    <span class="category-icon">
+                      <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93.01 0 .01 0 0 0h7v7.93z"/>
+                      </svg>
+                    </span>
+                    <span class="category-name">Паста</span>
+                  </a>
+                   <!-- Категория: Лапша -->
+                   <a class="menu__category-button" href="#noodles">
+                    <span class="category-icon">
+                      <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93.01 0 .01 0 0 0h7v7.93z"/>
+                      </svg>
+                    </span>
+                    <span class="category-name">Лапша</span>
+                  </a>
+                  <!-- Категория: Салаты -->
+                  <a class="menu__category-button" href="#salads">
+                    <span class="category-icon">
+                      <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93.01 0 .01 0 0 0h7v7.93z"/>
+                      </svg>
+                    </span>
+                    <span class="category-name">Салаты</span>
+                  </a>
+                  <!-- Категория: Жаркое -->
+                  <a class="menu__category-button" href="#roast">
+                    <span class="category-icon">
+                      <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93.01 0 .01 0 0 0h7v7.93z"/>
+                      </svg>
+                    </span>
+                    <span class="category-name">Жаркое</span>
+                  </a>
+                  <!-- Категория: Закуски -->
+                  <a class="menu__category-button" href="#snaks">
+                    <span class="category-icon">
+                      <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93.01 0 .01 0 0 0h7v7.93z"/>
+                      </svg>
+                    </span>
+                    <span class="category-name">Закуски</span>
+                  </a>
+                  <a class="menu__category-button" href="#sets">
+                    <span class="category-icon">
+                      <svg viewBox="0 0 24 24" width="24" height="24">
+                        <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93.01 0 .01 0 0 0h7v7.93z"/>
+                      </svg>
+                    </span>
+                    <span class="category-name">Сеты</span>
+                  </a>
+                </div>
+              </div>
+              <h3 class="section__title" id="burgers">Бургеры</h3><!--Заголовок категорий блюд-->
               <div class="dishes-category"> <!--Контейнер с карточками блюд-->
                 <div class="dish"> <!--Сама карточка-->
                   <div class="dish__card-content"> <!--Контент карточки-->
@@ -348,7 +425,7 @@
                     </div>
                 </div>
               </div>
-              <h3 class="section__title">Пицца</h3><!--Заголовок категорий блюд-->
+              <h3 class="section__title" id="pizza">Пицца</h3><!--Заголовок категорий блюд-->
               <div class="dishes-category"> <!--Контейнер с карточками блюд-->
                 <div class="dish"> <!--Сама карточка-->
                     <div class="dish__card-content"> <!--Контент карточки-->
@@ -501,7 +578,7 @@
                     </div>
                 </div>
               </div>
-              <h3 class="section__title">Паста и лапша</h3><!--Заголовок категорий блюд-->
+              <h3 class="section__title" id="pasta">Паста</h3><!--Заголовок категорий блюд-->
               <div class="dishes-category"> <!--Контейнер с карточками блюд-->
                 <div class="dish"> <!--Сама карточка-->
                     <div class="dish__card-content"> <!--Контент карточки-->
@@ -563,6 +640,9 @@
                         </div>
                     </div>
                 </div>
+              </div>
+              <h3 class="section__title" id="noodles">Лапша</h3><!--Заголовок категорий блюд-->
+              <div class="dishes-category"> <!--Контейнер с карточками блюд-->
                 <div class="dish"> <!--Сама карточка-->
                     <div class="dish__card-content"> <!--Контент карточки-->
                         <div class="dish__card-image"><!--Изображение блюда-->
@@ -609,7 +689,7 @@
                     </div>
                 </div>
               </div>
-              <h3 class="section__title">Салаты</h3><!--Заголовок категорий блюд-->
+              <h3 class="section__title" id="salads">Салаты</h3><!--Заголовок категорий блюд-->
               <div class="dishes-category"> <!--Контейнер с карточками блюд-->
                 <div class="dish"> <!--Сама карточка-->
                     <div class="dish__card-content"> <!--Контент карточки-->
@@ -687,7 +767,40 @@
                     </div>
                 </div>
               </div>
-              <h3 class="section__title">Снеки и закуски</h3><!--Заголовок категорий блюд-->
+              <h3 class="section__title" id="roast">Жаркое</h3><!--Заголовок категорий блюд-->
+              <div class="dishes-category"> <!--Контейнер с карточками блюд-->
+                <div class="dish"> <!--Сама карточка-->
+                    <div class="dish__card-content"> <!--Контент карточки-->
+                        <div class="dish__card-image"><!--Изображение блюда-->
+                          <img class="card-image" src="./images/Пицца_ветчина_грибы.jpeg">
+                        </div>
+                        <div class="dish__card-description"><!--Описание блюда-->
+                          <h3 class="card-description-price">430₽</h3>
+                          <h3 class="card-description-name">Сковородка с курицей</h3>
+                          <h3 class="weight">330г</h3>
+                          <button class="dish__card-button open-dish-btn" data-dish-id="chiken_roast"> <!--Кнопка с поп карточкой-->
+                            +
+                          </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dish"> <!--Сама карточка-->
+                    <div class="dish__card-content"> <!--Контент карточки-->
+                        <div class="dish__card-image"><!--Изображение блюда-->
+                          <img class="card-image" src="./images/Пицца_4 сыра.jpeg">
+                        </div>
+                        <div class="dish__card-description"><!--Описание блюда-->
+                          <h3 class="card-description-price">450₽</h3>
+                          <h3 class="card-description-name">Сковородка со свининой</h3>
+                          <h3 class="weight">330г</h3>
+                          <button class="dish__card-button open-dish-btn" data-dish-id="pork_roast"> <!--Кнопка с поп карточкой-->
+                            +
+                          </button>
+                        </div>
+                    </div>
+                </div>
+              </div>
+              <h3 class="section__title" id="snaks">Закуски</h3><!--Заголовок категорий блюд-->
               <div class="dishes-category"> <!--Контейнер с карточками блюд-->
                 <div class="dish"> <!--Сама карточка-->
                     <div class="dish__card-content"> <!--Контент карточки-->
@@ -960,7 +1073,7 @@
                     </div>
                 </div>
               </div>
-              <h3 class="section__title">Сеты</h3><!--Заголовок категорий блюд-->
+              <h3 class="section__title" id="sets">Сеты</h3><!--Заголовок категорий блюд-->
               <div class="dishes-category"> <!--Контейнер с карточками блюд-->
                 <div class="dish"> <!--Сама карточка-->
                     <div class="dish__card-content"> <!--Контент карточки-->
