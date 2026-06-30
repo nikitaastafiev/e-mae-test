@@ -699,15 +699,14 @@ header.header-hidden {
 
 .beer__category {
   display: grid;
-  gap: 20px;
+  gap: 1rem;
   grid-template-columns: repeat(2, 1fr); 
   grid-template-rows: repeat(2, 1fr); 
 }
 
-@media (max-width: 920px) {
-  .beer__category{
+@media (max-width: 909px) {
+  .beer__category {
     display: grid;
-    gap: 20px ;
     grid-template-columns: repeat(1, 1fr);
   }
   
@@ -734,12 +733,11 @@ header.header-hidden {
   height: 100%;
   position: relative;
   width: 100%;
-  gap: 10px;
   min-height: 400px;
   max-height: 600px;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 480px) {
   .beer__card-content {
     display: grid;
     grid-template-columns: 1fr;
@@ -765,7 +763,7 @@ header.header-hidden {
   }
 }
 
-@media (max-width: 580px) {
+@media (max-width: 480px) {
   .beer {
     max-height: 580px;
   }
@@ -789,7 +787,7 @@ header.header-hidden {
 }
 
 .beer__card-description {
-  padding: 30px 20px 20px 20px;
+  padding: 1.25rem;
   display: flex;
   flex-direction: column;
   color: #2c2c2c;
@@ -797,7 +795,7 @@ header.header-hidden {
 
 @media (max-width: 580px) {
   .beer__card-description {
-    padding-top: 10px;
+    padding: 0.80rem;
   }
 }
 
@@ -805,7 +803,6 @@ header.header-hidden {
   margin: 0;
   font-size: 24px;
   font-weight: 700;
-  padding-right: 20px;
 }
 
 .beer__description {
@@ -842,7 +839,7 @@ header.header-hidden {
 .dishes-category {
   display: grid;
   gap: 2rem 1.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
   grid-auto-rows: 1fr; 
   justify-content: space-between;
   overflow: hidden;
@@ -872,42 +869,38 @@ header.header-hidden {
 }
 
 .menu__slider-container {
+  display: flex;
   position: sticky;
   width: 100%;
   max-width: none;
   overflow: hidden;
   z-index: 90; 
   top: 0;
-  margin: 0;
   background-color: var(--color-main-light); 
-  padding-top: 1.5rem; 
-  padding-bottom: 1.5rem;
   transition: padding 0.3s ease;
 
 }
 
 .menu__slider-container.is-sticky {
-  padding-top: 0.625rem;  /* Уменьшаем отступы, слайдер визуально "подтягивается" */
-  padding-bottom: 0.625rem;
+  padding-top: 0.625rem;
   box-shadow: var(--box-shadow-4);
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
-  background-color: rgba(18, 18, 18, 0.75); 
-  backdrop-filter: blur(0.5rem);
   -webkit-backdrop-filter: blur(0.5rem);
 }
 
 /* Трек для скролла */
 .menu__slider-track {
   display: flex;
+  align-items: center;    
   gap: 0.75rem;
   overflow-x: auto;
-  justify-content: space-around;
   scroll-behavior: smooth;
-  max-width: calc(var(--grid-width) + var(--grid-padding) * 2);/* Используем твои переменные для выравнивания кнопок по сетке лендинга */
+  position: relative;
+  height: 100%;
+  max-width: calc(var(--grid-width) + var(--grid-padding) * 2);
   margin: 0 auto;
-  padding: 0.625rem 3.75rem 0.625rem var(--grid-padding); /* Добавляем падинг, чтобы на экранах меньше 1280px первая кнопка не прижималась к стеклу экрана */
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
@@ -916,7 +909,76 @@ header.header-hidden {
   display: none;
 }
 
-/* Кнопка категории */
+.menu__slider-container.is-sticky .menu__slider-track::before {
+  content: '';
+  position: sticky;
+  left: 0;                   
+  z-index: 5;                
+  width: 3rem;         
+  align-self: stretch;    
+  flex-shrink: 0;
+  background: linear-gradient(to right, var(--color-main-light), rgba(18, 18, 18, 0));
+  margin-right: -1.25rem;
+  pointer-events: none;      
+}
+
+/* --- КНОПКА ДЛЯ ВОЗВРАТА К ШАПКЕ  --- */
+
+/* Базовое (скрытое) состояние кнопки возврата */
+.menu-back-btn {
+  position: sticky;
+  left: 0;                   
+  z-index: 10;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 0;
+  height: 0;
+  padding: 0;
+  opacity: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border-radius: 1.875rem;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: transparent;
+  flex-shrink: 0;
+  border-radius: 0;                     
+  transition: width 0.35s ease-in-out, height 0.35s ease-in-out, opacity 0.25s ease-in-out, margin 0.35s ease-in-out;
+}
+
+/* Эффект при наведении */
+.menu-back-btn:hover {
+  filter: brightness(0.9);
+}
+
+/* Фиксируем размеры логотипа внутри кнопки */
+.menu-back-btn img {
+  position: relative;
+  width: 4rem;       
+  height: 4rem;
+  object-fit: contain;
+  flex-shrink: 0;   
+  transition: all 0.35s ease-in-out;  
+}
+
+.menu__slider-container.is-sticky .menu-back-btn {
+  width: 3.125rem;             
+  height: 100%;             
+  margin-top: 0;
+  margin-bottom: 0;
+  opacity: 1;
+}
+
+@media (max-width: 768px) {
+  .menu-slider-container.is-sticky .menu-back-btn {
+    width: 3rem;             
+    height: 100%;          
+  }
+}
+
+/* --- КНОПКА КАТЕГОРИИ --- */
 .menu__category-button {
   display: inline-flex;
   align-items: center;
@@ -964,8 +1026,8 @@ header.header-hidden {
   top: 0;
   right: 0;
   height: 100%;
-  width: 3.75rem;            /* 60px / 16 */
-  background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--color-main-light)); /* Подставь переменную фона сайта */
+  width: 3.75rem;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0), var(--color-main-light));
   pointer-events: none;
   z-index: 2;
 }
@@ -975,13 +1037,13 @@ header.header-hidden {
 .dish {
   background: var(--color-accent-light);
   border-radius: 1.75rem;
-  padding: 2rem;
+  padding: 1.75rem;
   position: relative;
   box-shadow: var(--shadowBefore);
   display: flex;
   flex-direction: column;
   height: 100%;
-  min-height: 460px; 
+  min-height: 430px; 
 }
 
 .dish:hover {
@@ -1003,7 +1065,7 @@ header.header-hidden {
 }
 
 
-/* ВНУТРЕННИЙ КОНТЕНТ */
+/* --- ВНУТРЕННИЙ КОНТЕНТ --- */
 
 .dish__card-content {
   display: flex;
@@ -1073,7 +1135,7 @@ header.header-hidden {
 
 @media (max-width: 480px) {
   .card-description-name {
-    font-size: 1.15rem;
+    font-size: 1.24rem;
     height: 3.22rem; 
   }
 }

@@ -89,17 +89,35 @@ const targetIds = Array.from(menuLinks).map(link => link.getAttribute('href'));
 // 3. Находим на странице сами заголовки секций по этим ID
 const menuSections = targetIds.map(id => document.querySelector(id)).filter(section => section !== null);
 
-// 4. Настраиваем наблюдатель для секций меню
+// 4. Находим сам трек слайдера, который мы будем прокручивать
+const sliderTrack = document.querySelector('.menu__slider-track');
+
+// 5. Настраиваем наблюдатель для секций меню
 const sectionObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    // Если секция (заголовок) появилась в верхней половине экрана
+    // Если секция (заголовок) появилась в верхней части экрана
     if (entry.isIntersecting) {
       const id = entry.target.getAttribute('id');
       
-      // Переключаем класс active у ссылок
-      menuLinks.forEach(link => {
+      menuLinks.forEach((link) => {
         if (link.getAttribute('href') === `#${id}`) {
           link.classList.add('active');
+          
+          // --- БЕЗОПАСНАЯ АВТОДОКРУТКА (БЕЗ КОНФЛИКТОВ И БАГОВ) ---
+          // Высчитываем, сколько нужно прокрутить трек, чтобы кнопка встала по центру
+          const trackWidth = sliderTrack.offsetWidth;
+          const linkOffsetLeft = link.offsetLeft;
+          const linkWidth = link.offsetWidth;
+          
+          // Формула центра: позиция кнопки минус половина ширины трека плюс половина ширины самой кнопки
+          const scrollTarget = linkOffsetLeft - (trackWidth / 2) + (linkWidth / 2);
+          
+          // Прокручиваем СТРОГО трек слайдера по горизонтали, не трогая страницу
+          sliderTrack.scrollTo({
+            left: Math.max(0, scrollTarget), // Не уходим в отрицательные значения
+            behavior: 'smooth'
+          });
+          
         } else {
           link.classList.remove('active');
         }
@@ -107,12 +125,12 @@ const sectionObserver = new IntersectionObserver((entries) => {
     }
   });
 }, {
-  // Ищем пересечение в верхней части экрана (приблизительно там, где висит наш липкий слайдер)
-  rootMargin: '-15% 0px -75% 0px', 
+  // На десктопе и мобилках зона отслеживания (чуть ниже липкого слайдера)
+  rootMargin: '-12% 0px -80% 0px', 
   threshold: 0
 });
 
-// 5. Запускаем слежку за каждым заголовком категории
+// 6. Запускаем слежку за каждым заголовком категории
 menuSections.forEach(section => sectionObserver.observe(section));
 
 // Работа с модалкой
