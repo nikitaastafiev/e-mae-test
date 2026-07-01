@@ -12,8 +12,8 @@
   font-family: 'RussoOne';
   src: url('./fonts/RussoOne-Regular.woff2') format('woff2');
   font-weight: 400;
-    font-style: normal;
-    font-display: swap;
+  font-style: normal;
+  font-display: swap;
 }
 
 /* --- Убираем точки и отступы у списков --- */
@@ -388,6 +388,107 @@ h3, li {
   width: var(--size);
 }
 
+/* --- ШАПКА --- */
+
+.header {
+  left: 0;
+  padding-bottom: 24px;
+  padding-top: 24px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: var(--layoutHeader);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+header.header-hidden {
+  opacity: 0;
+  transform: translateY(-100%); 
+  pointer-events: none;      
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-bottom: 12px;
+    padding-top: 12px;
+  }
+}
+
+.header.is-scrolled {
+  background-color: var(--color-main-light);
+  box-shadow: var(--box-shadow-4);
+  padding-bottom: 12px;
+  padding-top: 12px;
+  transition: box-shadow var(--base-transition-duration), opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dark-mode.header.is-scrolled {
+  background-color: var(--color-main-dark);
+  color: var(--color-main-light);
+  box-shadow: var(--box-shadow-3);
+}
+
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.header__logo {
+  width: 64px;
+  height: 64px;
+  flex-shrink: 0;
+}
+
+@media (max-width: 810px) {
+  .header__logo {
+    margin-right: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .logo {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.header__menu-list {
+  display: flex;
+}
+
+@media (max-width: 810px) {
+  .hidden-mobile {
+    display:none!important;
+  }
+}
+
+@media (min-width: 810px) {
+  .visible-mobile {
+    display:none!important
+  }
+}
+
+
+.header__menu-item {
+  margin-right: 20px;
+  margin-left: 30px;
+  justify-content:center;
+}
+
+.header-menu-link {
+  display: inline-flex;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.header-actions {
+  display: flex;
+  column-gap: 40px;
+}
+
 /* --- ПЕРЕКЛЮЧАТЕЛЬ ТЕМ --- */
 
 .theme-switcher {
@@ -564,107 +665,6 @@ h3, li {
     padding-right: inherit;
 }
 
-/* --- ШАПКА --- */
-
-.header {
-  left: 0;
-  padding-bottom: 24px;
-  padding-top: 24px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: var(--layoutHeader);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-header.header-hidden {
-  opacity: 0;
-  transform: translateY(-100%); 
-  pointer-events: none;      
-}
-
-@media (max-width: 768px) {
-  .header {
-    padding-bottom: 12px;
-    padding-top: 12px;
-  }
-}
-
-.header.is-scrolled {
-  background-color: var(--color-main-light);
-  box-shadow: var(--box-shadow-4);
-  padding-bottom: 12px;
-  padding-top: 12px;
-  transition: box-shadow var(--base-transition-duration), opacity 0.3s ease, transform 0.3s ease;
-}
-
-.dark-mode.header.is-scrolled {
-  background-color: var(--color-main-dark);
-  color: var(--color-main-light);
-  box-shadow: var(--box-shadow-3);
-}
-
-.header__inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 30px;
-}
-
-.header__logo {
-  width: 64px;
-  height: 64px;
-  flex-shrink: 0;
-}
-
-@media (max-width: 810px) {
-  .header__logo {
-    margin-right: auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .logo {
-    width: 48px;
-    height: 48px;
-  }
-}
-
-.header__menu-list {
-  display: flex;
-}
-
-@media (max-width: 810px) {
-  .hidden-mobile {
-    display:none!important;
-  }
-}
-
-@media (min-width: 810px) {
-  .visible-mobile {
-    display:none!important
-  }
-}
-
-
-.header__menu-item {
-  margin-right: 20px;
-  margin-left: 30px;
-  justify-content:center;
-}
-
-.header-menu-link {
-  display: inline-flex;
-  padding-bottom: 20px;
-  padding-top: 20px;
-  text-align: center;
-}
-
-.header-actions {
-  display: flex;
-  column-gap: 40px;
-}
-
 /* --- СЕКЦИИ --- */
 
 .section {
@@ -674,8 +674,9 @@ header.header-hidden {
 
 .section__title {
   font-family: var(--font-family-accent);
-  font-size: 30px;
-  margin-bottom: 15px;
+  font-size: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 920px) {
@@ -687,12 +688,17 @@ header.header-hidden {
 /* --- HERO — СЕКЦИЯ --- */
 
 
-.hero__section p {
-  margin-bottom: 24px;
+.hero__section-text {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  letter-spacing: 0.15px;
 }
 
-.hero_section-text {
-  letter-spacing: 0.15px;
+@media (max-width: 909px) {
+  .hero__section-text {
+    padding-left: 1rem;
+    padding-right: 2rem;
+  }
 }
 
 /* --- БАР — СЕКЦИЯ --- */
@@ -701,23 +707,19 @@ header.header-hidden {
   display: grid;
   gap: 1rem;
   grid-template-columns: repeat(2, 1fr); 
-  grid-template-rows: repeat(2, 1fr); 
 }
 
 @media (max-width: 909px) {
   .beer__category {
+    padding: 1rem;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
   }
-  
 }
 
 .beer {
   background: var(--color-accent-light);
   border-radius: var(--border-radius-2);
-  padding: 0px;
-  position: relative;
-  max-height: 430px;
   box-shadow: var(--shadowBefore);
 }
 
@@ -730,11 +732,8 @@ header.header-hidden {
 .beer__card-content{
   display: grid;
   grid-template-columns: 1fr 2fr;
-  height: 100%;
-  position: relative;
   width: 100%;
-  min-height: 400px;
-  max-height: 600px;
+  height: 100%;
 }
 
 @media (max-width: 480px) {
@@ -748,19 +747,8 @@ header.header-hidden {
   width: 100%;
   height: 100%;
   object-fit: cover; 
-  display: block;
-  border-top-left-radius: 16px;
-  border-bottom-left-radius: 16px;
-  max-height: 430px;
-}
-
-@media (max-width: 1022px) {
-  .beer {
-    max-height: 460px;
-  }
-  .beer-image {
-    max-height: 458px
-  }
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
 }
 
 @media (max-width: 480px) {
@@ -800,14 +788,16 @@ header.header-hidden {
 }
 
 .beer__title {
-  margin: 0;
-  font-size: 24px;
-  font-weight: 700;
+  font-size: 1.75rem;
 }
 
 .beer__description {
-  margin: 0;
-  line-height: 1.5;
+  font-size: 1.25rem;
+  margin-block: 1rem;
+}
+
+.beer__description-text {
+  font-size: 1rem;
 }
 
 /* СПИСОК ХАРАКТЕРИСТИК */
@@ -817,11 +807,10 @@ header.header-hidden {
 }
 
 .beer__stats ul {
-  list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 10px;
+  gap: 0.5rem;
 }
 
 .beer__stats li {
@@ -878,29 +867,28 @@ header.header-hidden {
   top: 0;
   background-color: var(--color-main-light); 
   transition: padding 0.3s ease;
-
 }
 
 .menu__slider-container.is-sticky {
   padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
   box-shadow: var(--box-shadow-4);
   width: 100vw;
   margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%);
-  -webkit-backdrop-filter: blur(0.5rem);
 }
 
 /* Трек для скролла */
 .menu__slider-track {
   display: flex;
+  justify-content: space-between;
+  flex-direction: row;
   align-items: center;    
   gap: 0.75rem;
   overflow-x: auto;
   scroll-behavior: smooth;
   position: relative;
   height: 100%;
-  max-width: calc(var(--grid-width) + var(--grid-padding) * 2);
-  margin: 0 auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
 }
@@ -909,12 +897,27 @@ header.header-hidden {
   display: none;
 }
 
-.menu__slider-container.is-sticky .menu__slider-track::before {
+.modifier__slide-track {
+  padding-left: 0;
+  padding-right: 4.5rem;
+}
+
+.menu__slider-container.is-sticky .modifier__slide-track {
+  padding-right: 3rem;
+}
+
+.menu-list {
+  display: flex;
+  gap: 2rem;
+  justify-content: space-around;
+}
+
+/*.menu__slider-container.is-sticky .menu-back-btn::after {
   content: '';
   position: sticky;
   left: 0;                   
   z-index: 5;                
-  width: 3rem;         
+  width: 1rem;         
   align-self: stretch;    
   flex-shrink: 0;
   background: linear-gradient(to right, var(--color-main-light), rgba(18, 18, 18, 0));
@@ -926,7 +929,6 @@ header.header-hidden {
 
 /* Базовое (скрытое) состояние кнопки возврата */
 .menu-back-btn {
-  position: sticky;
   left: 0;                   
   z-index: 10;
   display: inline-flex;
@@ -964,15 +966,17 @@ header.header-hidden {
 }
 
 .menu__slider-container.is-sticky .menu-back-btn {
+  position: sticky;
   width: 3.125rem;             
   height: 100%;             
   margin-top: 0;
   margin-bottom: 0;
   opacity: 1;
+  background-color: var(--color-main-light);
 }
 
 @media (max-width: 768px) {
-  .menu-slider-container.is-sticky .menu-back-btn {
+  .menu__slider-container.is-sticky .menu-back-btn {
     width: 3rem;             
     height: 100%;          
   }
