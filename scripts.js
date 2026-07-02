@@ -39,13 +39,15 @@ const button = document.getElementById('burger-button')
 const menu = document.getElementById('mobile-menu')
 
 button.addEventListener('click', () => {
-    menu.classList.toggle('is-open');
+  menu.classList.toggle('is-open');
+  document.body.classList.toggle('no-scroll', menu.classList.contains('is-open'));
 });
 
 document.addEventListener('click', (e) => {
-    if (e.target !== button) {
-        menu.classList.remove('is-open');
-    }
+  if (e.target !== button) {
+    menu.classList.remove('is-open');
+    document.body.classList.remove('no-scroll');
+  }
 });
 
 // Крепим слайдер в место header'а

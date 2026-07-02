@@ -285,6 +285,10 @@ body {
   overflow-x: hidden;
 }
 
+body.no-scroll {
+  overflow: hidden;
+}
+
 @media (max-width: 768px) {
   body {padding-top: 64px;}
 }
@@ -294,18 +298,6 @@ h3, li {
   -moz-osx-font-smoothing: grayscale;  /* Аналог для Firefox на Mac */
 }
 
-/* Попробовать еще и это 
-h3, li {
-  text-rendering: optimizeLegibility;
-  font-smooth: always;
-}
-*/
-
-/* В крайнем случае — это 
-h3, li {
-  -webkit-text-stroke: 0.1px rgba(0, 0, 0, 0.1);
-}
-*/
 
 /* --- ТЕМНАЯ ТЕМА --- */
 
@@ -712,7 +704,13 @@ header.header-hidden {
 @media (max-width: 909px) {
   .beer__category {
     padding: 1rem;
-    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 30rem) {
+  .beer__category {
+    padding: 0.2rem;
     grid-template-columns: repeat(1, 1fr);
   }
 }
@@ -827,23 +825,27 @@ header.header-hidden {
 
 .dishes-category {
   display: grid;
-  gap: 2rem 1.5rem;
-  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
-  grid-auto-rows: 1fr; 
-  justify-content: space-between;
+  gap: 2rem 1.75rem;
+  grid-template-columns: repeat(auto-fill, minmax(14.25rem, 1fr));
   overflow: hidden;
   width: 100%;
-  padding: 1rem 1rem 1.25rem 1rem;
+  padding: 1rem;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
   .dishes-category {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem 1rem;
+    gap: 2rem 3vw;
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 30rem) {
+ .dishes-category {
+    padding: 0.2rem;
+ }
+}
+
+@media (max-width: 22.5rem) {
   .dishes-category {
     grid-template-columns: 1fr;
     gap: 1.25rem;
@@ -863,7 +865,7 @@ header.header-hidden {
   width: 100%;
   max-width: none;
   overflow: hidden;
-  z-index: 90; 
+  z-index: 20; 
   top: 0;
   background-color: var(--color-main-light); 
   transition: padding 0.3s ease;
@@ -908,7 +910,7 @@ header.header-hidden {
 
 .menu-list {
   display: flex;
-  gap: 2rem;
+  gap: 2vw;
   justify-content: space-around;
 }
 
@@ -999,6 +1001,14 @@ header.header-hidden {
   transition: all 0.3s ease;
 }
 
+@media (max-width: 30rem) {
+  .menu__category-button {
+    padding: 0.525rem 0.8em;
+    font-size: 0.9rem;
+    gap: 0.2rem;
+  }
+}
+
 .menu__category-button:hover {
   background-color: var(--color-accent-light);
 }
@@ -1039,15 +1049,14 @@ header.header-hidden {
 /* --- ОСНОВНОЙ КОНТЕЙНЕР КАРТОЧКИ --- */
 
 .dish {
-  background: var(--color-accent-light);
-  border-radius: 1.75rem;
-  padding: 1.75rem;
-  position: relative;
-  box-shadow: var(--shadowBefore);
   display: flex;
   flex-direction: column;
   height: 100%;
-  min-height: 430px; 
+  border-radius: 1.75rem;
+  padding: 1.2rem;
+  position: relative;
+  background: var(--color-accent-light);
+  box-shadow: var(--shadowBefore);
 }
 
 .dish:hover {
@@ -1055,16 +1064,14 @@ header.header-hidden {
   transition-duration: var(--base-transition-duration);
 }
 @media (max-width: 768px) {
-  .dish {
-    min-height: 380px; 
-    padding: 1.25rem; 
+  .dish { 
+    padding: 1.125rem; 
   }
 }
 
 @media (max-width: 480px) {
   .dish {
-    padding: 1.25rem; 
-    min-height: auto;
+    padding: 1rem; 
   }
 }
 
@@ -1117,7 +1124,7 @@ header.header-hidden {
 
 @media (max-width: 480px) {
  .card-description-price {
-    font-size: 1.35rem;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
 }
@@ -1125,7 +1132,6 @@ header.header-hidden {
 .card-description-name {
   font-size: 1.25rem;
   font-weight: 500;
-  line-height: 1.4;
   text-align: center;
   margin-top: 0.5rem;
   height: 3.5rem;
@@ -1139,8 +1145,8 @@ header.header-hidden {
 
 @media (max-width: 480px) {
   .card-description-name {
-    font-size: 1.24rem;
-    height: 3.22rem; 
+    font-size: 1.125rem;
+    height: 3rem; 
   }
 }
 
@@ -1173,6 +1179,12 @@ header.header-hidden {
   transition: all .3s;
   width: 100%;
   margin-top: auto;
+}
+
+@media (max-width: 30rem) {
+  .dish__card-button {
+    height: 2.25rem;
+  }
 }
 
 .dish__card-button:hover {
