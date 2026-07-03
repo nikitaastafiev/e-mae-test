@@ -165,7 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const modal = document.getElementById('dish-modal');
   const openButtons = document.querySelectorAll('.open-dish-btn');
   const closeButton = modal.querySelector('.close-modal-btn');
-  const allergenToggle = modal.querySelector('.allergen-toggle-btn');
+  const allergenToggle = modal.querySelector('.allergen__toggle-button');
   const allergenDropdown = modal.querySelector('.allergen-dropdown');
 
   const mImage = document.getElementById('modal-image');
