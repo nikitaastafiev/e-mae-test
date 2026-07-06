@@ -1249,6 +1249,15 @@ header.header-hidden {
   transition: transform 0.2s ease;
 }
 
+.close-modal-btn:focus {
+  outline: none !important;
+}
+
+.close-modal-btn:focus-visible {
+  outline: 2px solid var(--c-white);
+  outline-offset: 2px;
+}
+
 .close-modal-btn:hover {
   transform: scale(1.1);
 }
