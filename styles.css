@@ -1249,11 +1249,17 @@ header.header-hidden {
   transition: transform 0.2s ease;
 }
 
+.close-modal-btn:active {
+  -webkit-focus-ring-color: transparent !important; 
+}
+
 .close-modal-btn:focus {
   outline: none !important;
+  -webkit-focus-ring-color: transparent !important; 
 }
 
 .close-modal-btn:focus-visible {
+  -webkit-focus-ring-color: transparent !important; 
   outline: 2px solid var(--c-white);
   outline-offset: 2px;
 }
@@ -1464,7 +1470,7 @@ header.header-hidden {
 
 .footer__description {
   padding-top: 15px;
-  color: #2b2b29;
+  color: #2b2b29 !important;
 }
 
 @media (max-width: 580px) {
@@ -1473,8 +1479,7 @@ header.header-hidden {
   }
 }
 
-.not-a-phone {
-  color: inherit !important;          
+.not-a-phone {        
   text-decoration: none !important;   
   pointer-events: none !important;    
   cursor: default !important;         
