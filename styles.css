@@ -212,8 +212,9 @@ a:hover {
 
 :root { 
   --base-transition-duration: 0.3s;
+  --back-drop-color-light: rgba(255, 255, 255, 0.45);
   --color-main-light: #ffffff;
-  --color-main-dark: #2b2b29 ;
+  --color-main-dark: #2b2b29;
   --color-main-dark-for-shadow: #000;
   --color-accent-light: #e19229;
   --container-width: 1300px;
@@ -302,6 +303,7 @@ h3, li {
 /* --- ТЕМНАЯ ТЕМА --- */
 
 .dark-mode {
+  --back-drop-color-light: rgba(43, 43, 41, 0.65);
   --color-main-light: #2b2b29 ;
   --color-main-dark: #ffffff;
   --shadowBefore: var(--box-shadow-3), var(--box-shadow-inset-transparent);
@@ -705,7 +707,7 @@ header.header-hidden {
   grid-template-columns: repeat(2, 1fr); 
 }
 
-@media (max-width: 909px) {
+@media (max-width: 55.625rem) {
   .beer__category {
     padding: 1rem;
     grid-template-columns: repeat(1, 1fr);
@@ -878,6 +880,12 @@ header.header-hidden {
 }
 
 .menu__slider-container.is-sticky {
+  /*backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  background: var(--back-drop-color-light);
+  border: 1px solid var(--back-drop-color-light);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.05); */
+  /* - Сверху, glasmorphism эффект, нужно допилить или отказаться -*/
   padding-top: 0.625rem;
   padding-bottom: 0.625rem;
   box-shadow: var(--box-shadow-4);
