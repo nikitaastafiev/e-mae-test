@@ -1464,6 +1464,13 @@ header.header-hidden {
   }
 }
 
+.not-a-phone {
+  color: inherit !important;          
+  text-decoration: none !important;   
+  pointer-events: none !important;    
+  cursor: default !important;         
+}
+
 .footer__contacts {
   display: flex;
   align-items: flex-end;
