@@ -697,6 +697,46 @@ header.header-hidden {
   }
 }
 
+.hero__section-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero__button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.5rem;
+  background-color: #f5f5f5;
+  border: 0.0625rem solid transparent;
+  border-radius: 1.75rem;
+  color: #2b2b29;
+  font-size: 1rem;
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadowBefore);
+}
+
+.hero__button:hover {
+  background-color: var(--color-accent-light);
+}
+
+.hero__button-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  color: #2b2b29;
+}
+
+.hero__button-name {
+  color: #2b2b29;
+}
+
 /* --- БАР — СЕКЦИЯ --- */
 
 /* --- СЕТКА КОНТЕНТА --- */
