@@ -1,4 +1,4 @@
-// Переключатель темы
+// ПЕРЕКЛЮЧАТЕЛЬ ТЕМЫ
 
 let darkmode = localStorage.getItem('dark-mode')
 
@@ -22,7 +22,28 @@ themeSwitcher.addEventListener("click", () => {
   darkmode !=="active" ? enableDarkmode() : disableDarkmode()
 });
 
-// Добавляю класс заголовку при пролистывании
+// ПЕРЕКЛЮЧЕНИЕ ТЕМЫ В ЗАВИСИМОСТИ ОТ НАСТРОЕК ПОЛЬЗОВАТЕЛЯ
+
+const themeCheckbox = document.getElementById('theme-switcher');
+const darkModeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+
+function applySystemTheme(e) {
+  if (e.matches) {
+    document.body.classList.add('dark-mode');
+    if (themeCheckbox) themeCheckbox.checked = true;
+  } else {
+    document.body.classList.remove('dark-mode');
+    if (themeCheckbox) themeCheckbox.checked = false;
+  }
+}
+
+// 1. Проверяем тему сразу при загрузке сайта
+applySystemTheme(darkModeMediaQuery);
+
+// 2. Следим за изменениями в системе на лету (например, если сработал таймер ночного режима)
+darkModeMediaQuery.addEventListener('change', applySystemTheme);
+
+// ДОБОВЛЯЮ КЛАСС ЗАГОЛОВКУ ПРИ ПРОЛИСТЫВАНИИ
 
 window.addEventListener('scroll', function() {
   const element = document.querySelector('header');
@@ -33,7 +54,7 @@ window.addEventListener('scroll', function() {
   }
 });
 
-// Открываю мобильное меню при клике на кнопку
+// МОБИЛЬНОЕ МЕНЮ ПРИ КЛИКЕ НА КНОПКУ
 
 const button = document.getElementById('burger-button')
 const menu = document.getElementById('mobile-menu')
@@ -241,3 +262,28 @@ document.addEventListener('DOMContentLoaded', () => {
     allergenDropdown.classList.remove('is-active');
   }
 });
+
+// АНИМАЦИИ
+
+document.addEventListener('DOMContentLoaded', () => {
+
+  const elementsToAnimate = document.querySelectorAll('.anim-target');
+
+  const isMobile = window.innerWidth <= 768;
+
+  const animationObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      // Как только край секции пересекает границу видимости
+      if (entry.isIntersecting) {
+        entry.target.classList.add('animated');
+        // Убираем слежку, чтобы анимация сработала строго один раз при первом заходе
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    rootMargin: isMobile ? '0px 0px 10% 0px' : '0px 0px -5% 0px',
+    threshold: isMobile ? 0 : 0.02
+  });
+  elementsToAnimate.forEach(element => animationObserver.observe(element));
+});
+

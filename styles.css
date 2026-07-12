@@ -333,6 +333,8 @@ h3, li {
   min-height: inherit;
   position: relative;
   width: 100%;
+  overflow-x: clip;
+  overflow-y: visible;
 }
 
 .grid {
@@ -389,10 +391,22 @@ h3, li {
   padding-bottom: 24px;
   padding-top: 24px;
   position: fixed;
-  top: 0;
+  top: -100px;
   width: 100%;
   z-index: var(--layoutHeader);
   transition: opacity 0.3s ease, transform 0.3s ease;
+  animation: slideInFromTop 1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+}
+
+@keyframes slideInFromTop {
+  from {
+    top: -100px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
 }
 
 header.header-hidden {
@@ -677,6 +691,9 @@ header.header-hidden {
 
 /* --- HERO — СЕКЦИЯ --- */
 
+.hero {
+  overflow-x: hidden;
+}
 
 .hero__section-text {
   font-size: 1rem;
@@ -1077,8 +1094,8 @@ header.header-hidden {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 1.5rem;             /* 24px / 16 */
-  height: 1.5rem;            /* 24px / 16 */
+  width: 1.5rem;             
+  height: 1.5rem;            
 }
 
 /* Адаптивный SVG под размер контейнера */
@@ -1423,7 +1440,7 @@ header.header-hidden {
 .allergen-dropdown h4 {
   margin: 0 0 8px 0;
   font-size: 14px;
-  color: #c0392b; /* Акцентный красный цвет для предупреждения */
+  color: #c0392b;
 }
 
 .allergen-dropdown ul {
@@ -1565,3 +1582,27 @@ header.header-hidden {
 .footer-copyright {
   color: #2b2b29;
 }
+
+/* --- АНИМАЦИИ --- */
+
+/* Базовые стили анимаций */
+.anim-target {
+  opacity: 0;
+  transition: opacity 0.9s cubic-bezier(0.25, 1, 0.5, 1), transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: opacity, transform;
+}
+
+.anim-from-top    { transform: translateY(-100%); }
+.anim-from-left   { transform: translateX(-5rem); }
+.anim-from-right  { transform: translateX(5rem); }
+.anim-from-bottom { transform: translateY(4rem); }
+
+.anim-target.animated {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+/* задержеки для старта */
+.delay-header { transition-delay: 0.1s; }
+.delay-hero   { transition-delay: 0.3s; }
+.delay-bar { transition-delay: 0.5s; }
