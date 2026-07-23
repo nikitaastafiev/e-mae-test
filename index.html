@@ -88,15 +88,13 @@
           <h1 class="section__title">Кто мы такие</h1>
           <p class="hero__section-text">Ищете, где перезагрузиться после сложной недели, шумно отметить праздник или просто душевно посидеть с друзьями? Приходите к нам в паб «Ë-Маё»! Мы создали атмосферное пространство с по-настоящему домашним уютом, где каждый гость мгновенно становится своим. У нас никогда не бывает скучно. Собирайтесь компанией за настольными играми, погружайтесь в интригующие партии «Мафии» или зажигайте под живую музыку по субботам.</p>
           <p class="hero__section-text">Наша гордость — это сытная и невероятно вкусная кухня. Мы готовим сочные бургеры, горячую фирменную пиццу и разнообразные пикантные закуски, которые идеально дополняют нашу богатую карту свежего и крафтового пива. А за барной стойкой вас всегда встретит приветливый персонал, готовый помочь с выбором идеального сочетания под ваше настроение. Отключайте городскую суету и наслаждайтесь отличной едой, качественным звуком и лучшей атмосферой в городе!</p>
-          <!--<p class="hero__section-text"></p>--->
           <div class="hero__section-action">
             <a class="hero__button"
               href="tel:+7(962)8557878"
-              target="_blank"
               title="Phone number"
-              aria-label="Phone number">
-              <span class="hero__button-icon">
-                <svg viewBox="0 1 226 256">
+              aria-label="Позвонить и забронировать столик">
+              <span class="hero__button-icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 1 226 256">
                     <g transform="rotate(260 120 135)">
                       <path d="M231.55566,175.0791A56.07032,56.07032,0,0,1,176,224C96.59766,224,32,159.40234,32,80A56.07029,56.07029,0,0,1,80.91992,24.44434a16.02839,16.02839,0,0,1,16.65235,9.583l20.09179,46.87793a15.96924,15.96924,0,0,1-1.32031,15.06641L99.709,121.38965l-.00195.00195a76.54083,76.54083,0,0,0,35.20508,35.04981l25.043-16.69336a15.95139,15.95139,0,0,1,15.17871-1.39453l46.83789,20.07324A16.03476,16.03476,0,0,1,231.55566,175.0791ZM157.35156,47.72852a72.12078,72.12078,0,0,1,50.91992,50.91992,7.99975,7.99975,0,0,0,15.457-4.13086,88.16381,88.16381,0,0,0-62.2461-62.2461,7.99975,7.99975,0,0,0-4.13086,15.457Zm-8.28418,30.917a40.06626,40.06626,0,0,1,28.28711,28.28711,7.99975,7.99975,0,0,0,15.457-4.13086,56.10589,56.10589,0,0,0-39.61328-39.61328,7.99975,7.99975,0,0,0-4.13086,15.457Z"/>
                     </g>
@@ -111,19 +109,19 @@
         <div class="container">
           <h2 class="section__title">Бар</h2>
           <div class="beer__category"><!--Секция с контентом-->
-            <div class="beer"><!--Карточка с пивом-->
+            <article class="beer"><!--Карточка с пивом-->
               <div class="beer__card-content">
                 <div class="beer__card-image">
-                  <img class="beer-image" src="./images/Пиво_Чешское.jpg">
+                  <img class="beer-image" src="./images/Пиво_Чешское.jpg" alt="">
                 </div>
                 <div class="beer__card-description"><!--Описание блюда-->
                   <h3 class="beer__title">Чешское</h3>
                   <div>
-                    <h3 class ="beer__description">Описание</h3>
+                    <h4 class ="beer__description">Описание</h4>
                     <p class="beer__description-text">Его вкус — это безупречный баланс густого, карамельно-сладкого солодового тела и глубокой, благородной горчинки знаменитого чешского хмеля.</p>
                   </div>
                   <div class="beer__stats">
-                    <h3 class ="beer__description">Характеристики</h3>
+                    <h5 class ="beer__description">Характеристики</h5>
                     <ul>
                       <li>
                         <p>Крепость (ABV):</p>
@@ -141,20 +139,20 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="beer"><!--Карточка с пивом-->
+            </article>
+            <article class="beer"><!--Карточка с пивом-->
               <div class="beer__card-content">
                 <div class="beer__card-image">
-                  <img class="beer-image" src="./images/Пиво_Пшеничное.jpg">
+                  <img class="beer-image" src="./images/Пиво_Пшеничное.jpg" alt="">
                 </div>
                 <div class="beer__card-description"><!--Описание блюда-->
-                  <h2 class="beer__title">Пшеничное</h3>
+                  <h3 class="beer__title">Пшеничное</h3>
                   <div>
-                    <h3 class ="beer__description">Описание</h3>
+                    <h4 class ="beer__description">Описание</h4>
                     <p class="beer__description-text">Каноничное баварское пшеничное пиво. Густое, естественно мутное, золотое пиво с невероятной кремовой пеной-шапкой.</p>
                   </div>
                   <div class="beer__stats">
-                    <h3 class ="beer__description">Характеристики</h3>
+                    <h5 class ="beer__description">Характеристики</h5>
                     <ul>
                       <li>
                         <p>Крепость (ABV):</p>
@@ -172,20 +170,20 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="beer"><!--Карточка с пивом-->
+            </article>
+            <article class="beer"><!--Карточка с пивом-->
               <div class="beer__card-content">
                 <div class="beer__card-image">
-                  <img class="beer-image" src="./images/Пиво_Кардымовское.jpg">
+                  <img class="beer-image" src="./images/Пиво_Кардымовское.jpg" alt="">
                 </div>
                 <div class="beer__card-description"><!--Описание блюда-->
-                  <h2 class="beer__title">Кардымовское</h3>
+                  <h3 class="beer__title">Кардымовское</h3>
                   <div>
-                    <h3 class ="beer__description">Описание</h3>
+                    <h4 class ="beer__description">Описание</h4>
                     <p class="beer__description-text">Абсолютная классика немецкого пивоварения и синоним идеального освежения. Кристально чистое, соломенно-золотое пиво с безупречной белой пенной шапкой.</p>
                   </div>
                   <div class="beer__stats">
-                    <h3 class ="beer__description">Характеристики</h3>
+                    <h5 class ="beer__description">Характеристики</h5>
                     <ul>
                       <li>
                         <p>Крепость (ABV):</p>
@@ -203,20 +201,20 @@
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="beer"><!--Карточка с пивом-->
+            </article>
+            <article class="beer"><!--Карточка с пивом-->
               <div class="beer__card-content">
                 <div class="beer__card-image">
-                  <img class="beer-image" src="./images/Пиво_Крымская_Роза.jpg">
+                  <img class="beer-image" src="./images/Пиво_Крымская_Роза.jpg" alt="">
                 </div>
                 <div class="beer__card-description"><!--Описание блюда-->
-                  <h2 class="beer__title">Крымская Роза</h3>
+                  <h3 class="beer__title">Крымская Роза</h3>
                   <div>
-                    <h3 class ="beer__description">Описание</h3>
+                    <h4 class ="beer__description">Описание</h4>
                     <p class="beer__description-text">Сочный вишневый сидр с ярким ароматом спелых ягод и приятной полусладкой кислинкой. Идеальный баланс легкости и вкуса в каждом глотке.</p>
                   </div>
                   <div class="beer__stats">
-                    <h3 class ="beer__description">Характеристики</h3>
+                    <h5 class ="beer__description">Характеристики</h5>
                     <ul>
                       <li>
                         <p>Крепость (ABV):</p>
@@ -234,7 +232,7 @@
                   </div>
                 </div>
               </div>
-            </div>
+            </article>
           </div>
         </div>
       </section>
@@ -354,882 +352,1147 @@
             </div>
             <h3 class="section__title" id="burgers">Бургеры</h3><!--Заголовок категорий блюд-->
             <div class="dishes-category"> <!--Контейнер с карточками блюд-->
-              <div class="dish"> <!--Сама карточка-->
+              <article class="dish"> <!--Сама карточка-->
                 <div class="dish__card-content"> <!--Контент карточки-->
                   <div class="dish__card-image"><!--Изображение блюда-->
-                    <img class="card-image" src="./images/Бургер_Феррари.webp">
+                    <img class="card-image" src="./images/Бургер_Феррари.webp" alt="">
                   </div>
                   <div class="dish__card-description"><!--Описание блюда-->
-                    <h3 class="card-description-price">380 ₽</h3>
+                    <p class="card-description-price">380 ₽</p>
                     <h3 class="card-description-name">Феррари</h3>
-                    <h3 class="weight">330 г</h3>
-                    <button class="dish__card-button open-dish-btn" data-dish-id="burger_ferrari"> <!--Кнопка с поп карточкой-->
-                      +
+                    <p class="weight">330 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="burger_ferrari"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
                     </button>
                   </div>
                 </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Бурег_Белый_Мерс.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">370 ₽</h3>
-                        <h3 class="card-description-name">Белый Мерс</h3>
-                        <h3 class="weight">330 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="burger_white_mers"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Бурег_Белый_Мерс.webp" alt="">
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Бурге_Черный_Бумер.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">370 ₽</h3>
-                        <h3 class="card-description-name">Черный Бумер</h3>
-                        <h3 class="weight">330 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="burger_black_bumer"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">370 ₽</p>
+                    <h3 class="card-description-name">Белый Мерс</h3>
+                    <p class="weight">330 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="burger_white_mers"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Бургер_Порш_911.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">380 ₽</h3>
-                        <h3 class="card-description-name">Порш 911</h3>
-                        <h3 class="weight">330 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="burger_porshe 911"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Бурге_Черный_Бумер.webp" alt="">
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Бургер_Порш_911.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">360 ₽</h3>
-                        <h3 class="card-description-name">Камаро</h3>
-                        <h3 class="weight">330 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="burger_kmaro"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">370 ₽</p>
+                    <h3 class="card-description-name">Черный Бумер</h3>
+                    <p class="weight">330 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="burger_black_bumer"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Бургер_Порш_911.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">380 ₽</p>
+                    <h3 class="card-description-name">Порш 911</h3>
+                    <p class="weight">330 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="burger_porshe 911"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Бургер_Порш_911.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">360 ₽</p>
+                    <h3 class="card-description-name">Камаро</h3>
+                    <p class="weight">330 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="burger_kmaro"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
                   <div class="dish__card-content"> <!--Контент карточки-->
                       <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Бургер_Порш_911.webp">
+                        <img class="card-image" src="./images/Бургер_Ямаха_МТ-01.webp" alt="">
                       </div>
                       <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">390 ₽</h3>
+                        <p class="card-description-price">390 ₽</p>
                         <h3 class="card-description-name">Ямаха МТ-01</h3>
-                        <h3 class="weight">400 Г</h3>
+                        <p class="weight">400 г</p>
                         <button class="dish__card-button open-dish-btn" data-dish-id="burger_yamaha"> <!--Кнопка с поп карточкой-->
-                          +
+                          <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                            <line x1="11" y1="8" x2="11" y2="14"/>
+                            <line x1="8" y1="11" x2="14" y2="11"/>
+                          </svg>
                         </button>
                       </div>
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Бургер_Порш_911.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">350 ₽</h3>
-                        <h3 class="card-description-name">Ауди ТТ</h3>
-                        <h3 class="weight">330 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="burger_audi"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Бургер_Порш_911.webp" alt="">
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Бургер_Запорожец.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">280 ₽</h3>
-                        <h3 class="card-description-name">Запорожец</h3>
-                        <h3 class="weight">185 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="burger_zaporojec"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">350 ₽</p>
+                    <h3 class="card-description-name">Ауди ТТ</h3>
+                    <p class="weight">330 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="burger_audi"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
                   </div>
-              </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Бургер_Запорожец.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">280 ₽</p>
+                    <h3 class="card-description-name">Запорожец</h3>
+                    <p class="weight">185 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="burger_zaporojec"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
             </div>
             <h3 class="section__title" id="pizza">Пицца</h3><!--Заголовок категорий блюд-->
             <div class="dishes-category"> <!--Контейнер с карточками блюд-->
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                    <div class="dish__card-image"><!--Изображение блюда-->
-                      <img class="card-image" src="./images/Пицца_Ветчина_Грибы.webp">
-                    </div>
-                    <div class="dish__card-description"><!--Описание блюда-->
-                      <h3 class="card-description-price">540 ₽</h3>
-                      <h3 class="card-description-name">Ветчина и грибы</h3>
-                      <h3 class="weight">650 г</h3>
-                      <button class="dish__card-button open-dish-btn" data-dish-id="pizza_ham&mushroom"> <!--Кнопка с поп карточкой-->
-                        +
-                      </button>
-                    </div>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Пицца_Ветчина_Грибы.webp" alt="">
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Пицца_Ветчина_Грибы.webp"">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">560 ₽</h3>
-                        <h3 class="card-description-name">Пепперони</h3>
-                        <h3 class="weight">650 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="pizza_peperoni"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">540 ₽</p>
+                    <h3 class="card-description-name">Ветчина и грибы</h3>
+                    <p class="weight">650 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="pizza_ham&mushroom"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Пицца_Мясная.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">630 ₽</h3>
-                        <h3 class="card-description-name">Мясная</h3>
-                        <h3 class="weight">700 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="pizza_meaty"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Пицца_Пеперони.webp"" alt="">
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Пицца_Мясная.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">520 ₽</h3>
-                        <h3 class="card-description-name">Маргарита</h3>
-                        <h3 class="weight">650 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="pizza_margarita"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">560 ₽</p>
+                    <h3 class="card-description-name">Пепперони</h3>
+                    <p class="weight">650 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="pizza_peperoni"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Пицца_4_Сыра.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">640 ₽</h3>
-                        <h3 class="card-description-name">4 Сыра</h3>
-                        <h3 class="weight">650 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="pizza_4chezz"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Пицца_Мясная.webp" alt="">
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Пицца_4_Сыра.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">540 ₽</h3>
-                        <h3 class="card-description-name">Гавайская</h3>
-                        <h3 class="weight">650 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="pizza_havai"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">630 ₽</p>
+                    <h3 class="card-description-name">Мясная</h3>
+                    <p class="weight">700 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="pizza_meaty"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Пицца_BBQ.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">600 ₽</h3>
-                        <h3 class="card-description-name">BBQ</h3>
-                        <h3 class="weight">650 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="pizza_BBQ"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Пицца_Маргарита.webp" alt="">
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Пицца_Цезарь.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">540 ₽</h3>
-                        <h3 class="card-description-name">Цезарь</h3>
-                        <h3 class="weight">700 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="pizza_chizaaaaaaaaar"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">520 ₽</p>
+                    <h3 class="card-description-name">Маргарита</h3>
+                    <p class="weight">650 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="pizza_margarita"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Пицца_Морская.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">650 ₽</h3>
-                        <h3 class="card-description-name">Морская</h3>
-                        <h3 class="weight">650 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="pizza_sea"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Пицца_4_Сыра.webp" alt="">
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Пицца_Сырный_Цыпленок.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">540 ₽</h3>
-                        <h3 class="card-description-name">Сырный цыппленок</h3>
-                        <h3 class="weight">650 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="pizza_cheazy_chiken"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">640 ₽</p>
+                    <h3 class="card-description-name">4 Сыра</h3>
+                    <p class="weight">650 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="pizza_4chezz"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
                   </div>
-              </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Пицца_4_Сыра.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">540 ₽</p>
+                    <h3 class="card-description-name">Гавайская</h3>
+                    <p class="weight">650 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="pizza_havai"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Пицца_BBQ.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">600 ₽</p>
+                    <h3 class="card-description-name">BBQ</h3>
+                    <p class="weight">650 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="pizza_BBQ"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Пицца_Цезарь.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">540 ₽</p>
+                    <h3 class="card-description-name">Цезарь</h3>
+                    <p class="weight">700 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="pizza_chizaaaaaaaaar"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Пицца_Морская.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">650 ₽</p>
+                    <h3 class="card-description-name">Морская</h3>
+                    <p class="weight">650 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="pizza_sea"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Пицца_Сырный_Цыпленок.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">540 ₽</p>
+                    <h3 class="card-description-name">Сырный цыппленок</h3>
+                    <p class="weight">650 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="pizza_cheazy_chiken"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
             </div>
             <h3 class="section__title" id="pasta">Паста</h3><!--Заголовок категорий блюд-->
             <div class="dishes-category"> <!--Контейнер с карточками блюд-->
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                    <div class="dish__card-image"><!--Изображение блюда-->
-                      <img class="card-image" src="./images/Паста_Болоньезе.webp">
-                    </div>
-                    <div class="dish__card-description"><!--Описание блюда-->
-                      <h3 class="card-description-price">390 ₽</h3>
-                      <h3 class="card-description-name">Карбонара</h3>
-                      <h3 class="weight">250 г</h3>
-                      <button class="dish__card-button open-dish-btn" data-dish-id="karbonara"> <!--Кнопка с поп карточкой-->
-                        +
-                      </button>
-                    </div>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Паста_Карбонара.webp" alt="">
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Паста_Болоньезе.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">390 ₽</h3>
-                        <h3 class="card-description-name">Паста с курицей и грибами</h3>
-                        <h3 class="weight">250 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="chiken_pasta"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">390 ₽</p>
+                    <h3 class="card-description-name">Карбонара</h3>
+                    <p class="weight">250 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="karbonara"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <circle cx="11" cy="11" r="8"/>
+                          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                          <line x1="11" y1="8" x2="11" y2="14"/>
+                          <line x1="8" y1="11" x2="14" y2="11"/>
+                        </svg>
+                    </button>
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Паста_Болоньезе.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">600 ₽</h3>
-                        <h3 class="card-description-name">Паста с креветками</h3>
-                        <h3 class="weight">300 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="shrimp_pasta"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Паста_Болоньезе.webp" alt="">
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Паста_Болоньезе.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">330 ₽</h3>
-                        <h3 class="card-description-name">Болоньезе</h3>
-                        <h3 class="weight">250 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="bolognese"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">390 ₽</p>
+                    <h3 class="card-description-name">Паста с курицей и грибами</h3>
+                    <p class="weight">250 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="chiken_pasta"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
                   </div>
-              </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Паста_Болоньезе.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">600 ₽</p>
+                    <h3 class="card-description-name">Паста с креветками</h3>
+                    <p class="weight">300 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="shrimp_pasta"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Паста_Болоньезе.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">330 ₽</p>
+                    <h3 class="card-description-name">Болоньезе</h3>
+                    <p class="weight">250 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="bolognese"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
             </div>
             <h3 class="section__title" id="noodles">Лапша</h3><!--Заголовок категорий блюд-->
             <div class="dishes-category"> <!--Контейнер с карточками блюд-->
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Удон_С_Курицей.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">260 ₽</h3>
-                        <h3 class="card-description-name">Удон с курицей</h3>
-                        <h3 class="weight">290г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="chiken_udon"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Удон_С_Курицей.webp" alt="">
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Удон_С_Курицей.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">270 ₽</h3>
-                        <h3 class="card-description-name">Удон со свининой</h3>
-                        <h3 class="weight">280г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="pork_udon"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">260 ₽</p>
+                    <h3 class="card-description-name">Удон с курицей</h3>
+                    <p class="weight">290г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="chiken_udon"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Удон_С_Курицей.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">490 ₽</h3>
-                        <h3 class="card-description-name">Удон с креветкой</h3>
-                        <h3 class="weight">300 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="shrimp_udon"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Удон_С_Курицей.webp" alt="">
                   </div>
-              </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">270 ₽</p>
+                    <h3 class="card-description-name">Удон со свининой</h3>
+                    <p class="weight">280г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="pork_udon"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Удон_С_Курицей.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">490 ₽</p>
+                    <h3 class="card-description-name">Удон с креветкой</h3>
+                    <p class="weight">300 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="shrimp_udon"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
             </div>
             <h3 class="section__title" id="salads">Салаты</h3><!--Заголовок категорий блюд-->
             <div class="dishes-category"> <!--Контейнер с карточками блюд-->
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                    <div class="dish__card-image"><!--Изображение блюда-->
-                      <img class="card-image" src="./images/Цезарь_С_Курицей.webp">
-                    </div>
-                    <div class="dish__card-description"><!--Описание блюда-->
-                      <h3 class="card-description-price">440 ₽</h3>
-                      <h3 class="card-description-name">Цезарь с курицей</h3>
-                      <h3 class="weight">250 г</h3>
-                      <button class="dish__card-button open-dish-btn" data-dish-id="chiken_сaesar"> <!--Кнопка с поп карточкой-->
-                        +
-                      </button>
-                    </div>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Цезарь_С_Курицей.webp" alt="">
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Цезарь_С_Курицей.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">550 ₽</h3>
-                        <h3 class="card-description-name">Цезарь с креветкой</h3>
-                        <h3 class="weight">250 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="shrimp_сaesar"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">440 ₽</p>
+                    <h3 class="card-description-name">Цезарь с курицей</h3>
+                    <p class="weight">250 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="chiken_сaesar"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                          <circle cx="11" cy="11" r="8"/>
+                          <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                          <line x1="11" y1="8" x2="11" y2="14"/>
+                          <line x1="8" y1="11" x2="14" y2="11"/>
+                        </svg>
+                    </button>
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Салат_Греческий.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">390 ₽</h3>
-                        <h3 class="card-description-name">Греческий</h3>
-                        <h3 class="weight">250 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="greek_salad"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Цезарь_С_Курицей.webp" alt="">
                   </div>
-              </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">550 ₽</p>
+                    <h3 class="card-description-name">Цезарь с креветкой</h3>
+                    <p class="weight">250 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="shrimp_сaesar"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Салат_Греческий.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">390 ₽</p>
+                    <h3 class="card-description-name">Греческий</h3>
+                    <p class="weight">250 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="greek_salad"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
             </div>
             <h3 class="section__title" id="roast">Жаркое</h3><!--Заголовок категорий блюд-->
             <div class="dishes-category"> <!--Контейнер с карточками блюд-->
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Жаркое_С_Курицей.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">430 ₽</h3>
-                        <h3 class="card-description-name">Сковородка с курицей</h3>
-                        <h3 class="weight">330 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="chiken_roast"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
-                  </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
+              <article class="dish"> <!--Сама карточка-->
                 <div class="dish__card-content"> <!--Контент карточки-->
                   <div class="dish__card-image"><!--Изображение блюда-->
-                    <img class="card-image" src="./images/Жаркое_С_Курицей.webp">
+                    <img class="card-image" src="./images/Жаркое_С_Курицей.webp" alt="">
                   </div>
                   <div class="dish__card-description"><!--Описание блюда-->
-                    <h3 class="card-description-price">450 ₽</h3>
-                    <h3 class="card-description-name">Сковородка со свининой</h3>
-                    <h3 class="weight">330 г</h3>
-                    <button class="dish__card-button open-dish-btn" data-dish-id="pork_roast"> <!--Кнопка с поп карточкой-->
-                      +
+                    <p class="card-description-price">430 ₽</p>
+                    <h3 class="card-description-name">Сковородка с курицей</h3>
+                    <p class="weight">330 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="chiken_roast"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
                     </button>
                   </div>
                 </div>
-              </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Жаркое_С_Курицей.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">450 ₽</p>
+                    <h3 class="card-description-name">Сковородка со свининой</h3>
+                    <p class="weight">330 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="pork_roast"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <circle cx="11" cy="11" r="8"/>
+                            <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                            <line x1="11" y1="8" x2="11" y2="14"/>
+                            <line x1="8" y1="11" x2="14" y2="11"/>
+                          </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
             </div>
             <h3 class="section__title" id="snaks">Закуски</h3><!--Заголовок категорий блюд-->
             <div class="dishes-category"> <!--Контейнер с карточками блюд-->
-              <div class="dish"> <!--Сама карточка-->
+              <article class="dish"> <!--Сама карточка-->
                 <div class="dish__card-content"> <!--Контент карточки-->
                   <div class="dish__card-image"><!--Изображение блюда-->
-                    <img class="card-image" src="./images/Крылышки_Терияки.webp">
+                    <img class="card-image" src="./images/Крылышки_Терияки.webp" alt="">
                   </div>
                   <div class="dish__card-description"><!--Описание блюда-->
-                    <h3 class="card-description-price">420 ₽</h3>
+                    <p class="card-description-price">420 ₽</p>
                     <h3 class="card-description-name">Сердечки терияки</h3>
-                    <h3 class="weight">270 г</h3>
-                    <button class="dish__card-button open-dish-btn" data-dish-id="tereiaky_hearts"> <!--Кнопка с поп карточкой-->
-                      +
+                    <p class="weight">270 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="tereiaky_hearts"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
                     </button>
                   </div>
                 </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
+              </article>
+              <article class="dish"> <!--Сама карточка-->
                 <div class="dish__card-content"> <!--Контент карточки-->
                   <div class="dish__card-image"><!--Изображение блюда-->
-                    <img class="card-image" src="./images/Крылышки_Терияки.webp">
+                    <img class="card-image" src="./images/Крылышки_Терияки.webp" alt="">
                   </div>
                   <div class="dish__card-description"><!--Описание блюда-->
-                    <h3 class="card-description-price">430 ₽</h3>
+                    <p class="card-description-price">430 ₽</p>
                     <h3 class="card-description-name">Ребрышки</h3>
-                    <h3 class="weight">300 г</h3>
-                    <button class="dish__card-button open-dish-btn" data-dish-id="ribs"> <!--Кнопка с поп карточкой-->
-                      +
+                    <p class="weight">300 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="ribs"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
                     </button>
                   </div>
                 </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
+              </article>
+              <article class="dish"> <!--Сама карточка-->
                 <div class="dish__card-content"> <!--Контент карточки-->
                   <div class="dish__card-image"><!--Изображение блюда-->
-                    <img class="card-image" src="./images/Крылышки_Сладкий_Чили.webp">
+                    <img class="card-image" src="./images/Крылышки_Сладкий_Чили.webp" alt="">
                   </div>
                   <div class="dish__card-description"><!--Описание блюда-->
-                    <h3 class="card-description-price">390 ₽</h3>
+                    <p class="card-description-price">390 ₽</p>
                     <h3 class="card-description-name">Крылышки чили</h3>
-                    <h3 class="weight">300 г</h3>
-                    <button class="dish__card-button open-dish-btn" data-dish-id="chilly_wings"> <!--Кнопка с поп карточкой-->
-                      +
+                    <p class="weight">300 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="chilly_wings"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
                     </button>
                   </div>
                 </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Крылышки_Терияки.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">390 ₽</h3>
-                        <h3 class="card-description-name">Крылышки BBQ</h3>
-                        <h3 class="weight">300 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="BBQ_wings"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
-                  </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
+              </article>
+              <article class="dish"> <!--Сама карточка-->
                 <div class="dish__card-content"> <!--Контент карточки-->
                   <div class="dish__card-image"><!--Изображение блюда-->
-                    <img class="card-image" src="./images/Крылышки_Терияки.webp">
+                    <img class="card-image" src="./images/Крылышки_Терияки.webp" alt="">
                   </div>
                   <div class="dish__card-description"><!--Описание блюда-->
-                    <h3 class="card-description-price">390 ₽</h3>
+                    <p class="card-description-price">390 ₽</p>
+                    <h3 class="card-description-name">Крылышки BBQ</h3>
+                    <p class="weight">300 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="BBQ_wings"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Крылышки_Терияки.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">390 ₽</p>
                     <h3 class="card-description-name">Крылышки терияки</h3>
-                    <h3 class="weight">300 г</h3>
-                    <button class="dish__card-button open-dish-btn" data-dish-id="tereiaky_wings"> <!--Кнопка с поп карточкой-->
-                      +
+                    <p class="weight">300 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="tereiaky_wings"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
                     </button>
                   </div>
                 </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
+              </article>
+              <article class="dish"> <!--Сама карточка-->
                 <div class="dish__card-content"> <!--Контент карточки-->
                   <div class="dish__card-image"><!--Изображение блюда-->
-                    <img class="card-image" src="./images/Крылышки_Сладкий_Чили.webp">
+                    <img class="card-image" src="./images/Крылышки_Сладкий_Чили.webp" alt="">
                   </div>
                   <div class="dish__card-description"><!--Описание блюда-->
-                    <h3 class="card-description-price">390 ₽</h3>
+                    <p class="card-description-price">390 ₽</p>
                     <h3 class="card-description-name">Крылышки шрирача</h3>
-                    <h3 class="weight">300 г</h3>
-                    <button class="dish__card-button open-dish-btn" data-dish-id="shriracha_wings"> <!--Кнопка с поп карточкой-->
-                      +
+                    <p class="weight">300 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="shriracha_wings"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
                     </button>
                   </div>
                 </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Креветки_Жаренные.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">610 ₽</h3>
-                        <h3 class="card-description-name">Креветки жареные</h3>
-                        <h3 class="weight">240 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="fry_shrimps"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
-                  </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
+              </article>
+              <article class="dish"> <!--Сама карточка-->
                 <div class="dish__card-content"> <!--Контент карточки-->
                   <div class="dish__card-image"><!--Изображение блюда-->
-                    <img class="card-image" src="./images/Креветки_В_Пиве.webp">
+                    <img class="card-image" src="./images/Креветки_Жаренные.webp" alt="">
                   </div>
                   <div class="dish__card-description"><!--Описание блюда-->
-                    <h3 class="card-description-price">610 ₽</h3>
-                    <h3 class="card-description-name">Креветки варёные в пивном тузлуке</h3>
-                    <h3 class="weight">240г</h3>
-                    <button class="dish__card-button open-dish-btn" data-dish-id="stew_shrimps"> <!--Кнопка с поп карточкой-->
-                      +
+                    <p class="card-description-price">610 ₽</p>
+                    <h3 class="card-description-name">Креветки жареные</h3>
+                    <p class="weight">240 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="fry_shrimps"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
                     </button>
                   </div>
                 </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Креветки_В_Пиве.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">330 ₽</h3>
-                        <h3 class="card-description-name">Кольца кальмара в панировке ФРИ</h3>
-                        <h3 class="weight">180 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="squid_rings"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Креветки_В_Пиве.webp" alt="">
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Креветки_В_Пиве.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">390 ₽</h3>
-                        <h3 class="card-description-name">Тигровые креветки в панировке</h3>
-                        <h3 class="weight">180 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="tiger_shrimps"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">610 ₽</p>
+                    <h3 class="card-description-name">Креветки варёные в пивном тузлуке</h3>
+                    <p class="weight">240г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="stew_shrimps"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Креветки_В_Пиве.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">390 ₽</h3>
-                        <h3 class="card-description-name">Мидии запечённые</h3>
-                        <h3 class="weight">180 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="baked_mussels"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Кольца_Кальмара.webp" alt="">
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Гренки_Чесночные.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">170 ₽</h3>
-                        <h3 class="card-description-name">Гренки чесночные</h3>
-                        <h3 class="weight">130 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="garlik_сroutons"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">330 ₽</p>
+                    <h3 class="card-description-name">Кольца кальмара в панировке</h3>
+                    <p class="weight">180 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="squid_rings"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Картофель_Фри.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">120 ₽</h3>
-                        <h3 class="card-description-name">Картофель ФРИ</h3>
-                        <h3 class="weight">100 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="french_fries"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Креветки_В_Панировке.webp" alt="">
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Картофель_Фри.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">130 ₽</h3>
-                        <h3 class="card-description-name">Картофель по деревенски</h3>
-                        <h3 class="weight">130 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="сountry-style potatoes"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">390 ₽</p>
+                    <h3 class="card-description-name">Тигровые креветки в панировке</h3>
+                    <p class="weight">180 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="tiger_shrimps"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Сырные_Палочки.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">310 ₽</h3>
-                        <h3 class="card-description-name">Сырные палочки «Моцарелла»</h3>
-                        <h3 class="weight">130 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="cheazy_stiks"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Мидии_Запечённые.webp" alt="">
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Сырные_Палочки.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">220 ₽</h3>
-                        <h3 class="card-description-name">Стрипсы куриные</h3>
-                        <h3 class="weight">120 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="chiken_strips"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">390 ₽</p>
+                    <h3 class="card-description-name">Мидии запечённые</h3>
+                    <p class="weight">180 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="baked_mussels"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Сырные_Палочки.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">160 ₽</h3>
-                        <h3 class="card-description-name">Чипсы картофельные</h3>
-                        <h3 class="weight">100 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="potato_chips"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Гренки_Чесночные.webp" alt="">
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Сырные_Палочки.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">170 ₽</h3>
-                        <h3 class="card-description-name">Луковые кольца</h3>
-                        <h3 class="weight">170 г</h3>
-                        <button class="dish__card-button open-dish-btn" data-dish-id="onion_rings"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">170 ₽</p>
+                    <h3 class="card-description-name">Гренки чесночные</h3>
+                    <p class="weight">130 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="garlik_сroutons"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
                   </div>
-              </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Картофель_Фри.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">120 ₽</p>
+                    <h3 class="card-description-name">Картофель ФРИ</h3>
+                    <p class="weight">100 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="french_fries"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Картофель_Деревенский.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">130 ₽</p>
+                    <h3 class="card-description-name">Картофель по деревенски</h3>
+                    <p class="weight">130 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="сountry-style potatoes"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Сырные_Палочки.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">310 ₽</p>
+                    <h3 class="card-description-name">Сырные палочки «Моцарелла»</h3>
+                    <p class="weight">130 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="cheazy_stiks"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Куринные_Стрипсы.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">220 ₽</p>
+                    <h3 class="card-description-name">Стрипсы куриные</h3>
+                    <p class="weight">120 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="chiken_strips"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Луковые_Кольца.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">170 ₽</p>
+                    <h3 class="card-description-name">Луковые кольца</h3>
+                    <p class="weight">170 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="onion_rings"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
             </div>
             <h3 class="section__title" id="sets">Сеты</h3><!--Заголовок категорий блюд-->
             <div class="dishes-category"> <!--Контейнер с карточками блюд-->
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                    <div class="dish__card-image"><!--Изображение блюда-->
-                      <img class="card-image" src="./images/Сет_Фирменный.webp">
-                    </div>
-                    <div class="dish__card-description"><!--Описание блюда-->
-                      <h3 class="card-description-price">960 ₽</h3>
-                      <h3 class="card-description-name">Фирменный — «Ë-Маё»</h3>
-                      <h3 class="weight">800 г</h3>
-                      <button class="dish__card-button"> <!--Кнопка с поп карточкой-->
-                        +
-                      </button>
-                    </div>
-                  </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
+              <article class="dish"> <!--Сама карточка-->
                 <div class="dish__card-content"> <!--Контент карточки-->
                   <div class="dish__card-image"><!--Изображение блюда-->
-                    <img class="card-image" src="./images/Сет_Фирменный.webp">
+                    <img class="card-image" src="./images/Сет_Фирменный.webp" alt="">
                   </div>
                   <div class="dish__card-description"><!--Описание блюда-->
-                    <h3 class="card-description-price">770 ₽</h3>
-                    <h3 class="card-description-name">«Хрень какая-то»</h3>
-                    <h3 class="weight">600 г</h3>
-                    <button class="dish__card-button"> <!--Кнопка с поп карточкой-->
-                      +
+                    <p class="card-description-price">960 ₽</p>
+                    <h3 class="card-description-name">Фирменный — «Ë-Маё»</h3>
+                    <p class="weight">800 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="set_E-mae"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
                     </button>
                   </div>
                 </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Сет_Обана.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">720 ₽</h3>
-                        <h3 class="card-description-name">«Обана»</h3>
-                        <h3 class="weight">600 г</h3>
-                        <button class="dish__card-button"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Сет_Фирменный.webp" alt="">
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Сет_Едрид_Мадрид.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">720 ₽</h3>
-                        <h3 class="card-description-name">«Едрид мадрид»</h3>
-                        <h3 class="weight">500 г</h3>
-                        <button class="dish__card-button"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">770 ₽</p>
+                    <h3 class="card-description-name">«Хрень какая-то»</h3>
+                    <p class="weight">600 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="set_some_shit"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Сет_Обана.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">720 ₽</h3>
-                        <h3 class="card-description-name">«Ëкарный бабай»</h3>
-                        <h3 class="weight">620 г</h3>
-                        <button class="dish__card-button"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Сет_Обана.webp" alt="">
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Сет_Обана.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">720 ₽</h3>
-                        <h3 class="card-description-name">«Ëк макарёк»</h3>
-                        <h3 class="weight">460 г</h3>
-                        <button class="dish__card-button"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">720 ₽</p>
+                    <h3 class="card-description-name">«Обана»</h3>
+                    <p class="weight">600 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="set_obana"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Сет_Обана.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">720 ₽</h3>
-                        <h3 class="card-description-name">«Футы-нуты»</h3>
-                        <h3 class="weight">550 г</h3>
-                        <button class="dish__card-button"> <!--Кнопка с поп карточкой-->
-                            +
-                        </button>
-                      </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Сет_Едрид_Мадрид.webp" alt="">
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Сет_Обана.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">410 ₽</h3>
-                        <h3 class="card-description-name">«Японский бог»</h3>
-                        <h3 class="weight">235 г</h3>
-                        <button class="dish__card-button"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">720 ₽</p>
+                    <h3 class="card-description-name">«Едрид мадрид»</h3>
+                    <p class="weight">500 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="set_edrid_madrid"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
                   </div>
-              </div>
-              <div class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
-                        <img class="card-image" src="./images/Сет_Обана.webp">
-                      </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
-                        <h3 class="card-description-price">360 ₽</h3>
-                        <h3 class="card-description-name">«Ëлки-палки»</h3>
-                        <h3 class="weight">250 г</h3>
-                        <button class="dish__card-button"> <!--Кнопка с поп карточкой-->
-                          +
-                        </button>
-                      </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Сет_Обана.webp" alt="">
                   </div>
-              </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">720 ₽</p>
+                    <h3 class="card-description-name">«Ëкарный бабай»</h3>
+                    <p class="weight">620 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="set_ekarnyi_babai"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Сет_Обана.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">720 ₽</p>
+                    <h3 class="card-description-name">«Ëк макарёк»</h3>
+                    <p class="weight">460 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="set_ek-makarek"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Сет_Обана.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">720 ₽</p>
+                    <h3 class="card-description-name">«Футы-нуты»</h3>
+                    <p class="weight">550 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="set_fu_ti_nu_ti"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Сет_Обана.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">410 ₽</p>
+                    <h3 class="card-description-name">«Японский бог»</h3>
+                    <p class="weight">235 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="set_japan_god"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
+              <article class="dish"> <!--Сама карточка-->
+                <div class="dish__card-content"> <!--Контент карточки-->
+                  <div class="dish__card-image"><!--Изображение блюда-->
+                    <img class="card-image" src="./images/Сет_Обана.webp" alt="">
+                  </div>
+                  <div class="dish__card-description"><!--Описание блюда-->
+                    <p class="card-description-price">360 ₽</p>
+                    <h3 class="card-description-name">«Ëлки-палки»</h3>
+                    <p class="weight">250 г</p>
+                    <button class="dish__card-button open-dish-btn" type="button" data-dish-id="set_elki_palki"> <!--Кнопка с поп карточкой-->
+                      <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <circle cx="11" cy="11" r="8"/>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                        <line x1="11" y1="8" x2="11" y2="14"/>
+                        <line x1="8" y1="11" x2="14" y2="11"/>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </article>
             </div>
           </div>
         </div>
@@ -1244,7 +1507,7 @@
             </div>
             <div class="footer__description">
               <p>ИНН: 490101<span></spans>233497</p>
-              <p>ОГРН: 3242375<span></span>00346<span></span>500</p>
+              <p>ОГРНИП: 3242375<span></span>00346<span></span>500</p>
               <p>Адрес: ул. 50 лет Октября, 140, Тимашевск.</p>
             </div>
           </div>
@@ -1255,7 +1518,6 @@
                     <a 
                     class="contacts-link" 
                     href="tel:+7(962)8557878"
-                    target="_blank"
                     title="Phone number"
                     aria-label="Phone number">
                       <svg 
@@ -1320,10 +1582,9 @@
       </footer>
     </div>
   </div>
-  <!-- Универсальное модальное окно (одно на всю страницу) -->
   <dialog id="dish-modal" class="modal">
     <div class="modal__card-content ">
-      <button class="close-modal-btn" aria-label="Закрыть">&times;</button>
+      <button class="close-modal-btn" type="button" aria-label="Закрыть">&times;</button>
       <!-- Левая часть -->
       <div class="modal__card-image">
         <img src="" alt="" id="modal-image" class="modal-image">
@@ -1332,17 +1593,23 @@
       <div class="modal__card-description">
         <h2 id="modal-title" class="dish-title"></h2>
         <div class="allergen__wrapper">
-          <button class="allergen__toggle-button" aria-label="Показать аллергены">⚠️</button>
+          <button class="allergen__toggle-button" type="button" aria-label="Показать аллергены">
+            ❗️
+          </button>
           <div class="allergen-dropdown">
             <h4>Возможные аллергены:</h4>
             <ul id="modal-allergens"></ul>
           </div>
         </div>
         <div class="dish-ingredients">
-          <h3>Состав:</h3>
+          <h3 id="ingredients-title">Состав:</h3>
           <p id="modal-ingredients"></p>
         </div>
-        <div class="dish-nutrition">
+        <div id="modal-sauces-block" class="dish-sauces" style="display: none;">
+          <h3 class="dish-sauces-title">Подаётся с соусом:</h3>
+          <p id="modal-sauces"></p>
+        </div>
+        <div class="dish-nutrition" id="modal-nutrition-block">
           <h3>КБЖУ:</h3>
           <ul>
             <li>Калории: <span id="modal-calories"></span></li>
@@ -1351,7 +1618,6 @@
             <li>Углеводы: <span id="modal-carbs"></span></li>
           </ul>
         </div>
-        <!-- Аллергены -->
       </div>
     </div>
   </dialog>

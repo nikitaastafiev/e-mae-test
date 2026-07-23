@@ -59,19 +59,22 @@ window.addEventListener('scroll', function() {
 const button = document.getElementById('burger-button')
 const menu = document.getElementById('mobile-menu')
 
+
 button.addEventListener('click', () => {
   menu.classList.toggle('is-open');
+  button.classList.toggle('is-open');
   document.body.classList.toggle('no-scroll', menu.classList.contains('is-open'));
 });
 
 document.addEventListener('click', (e) => {
-  if (e.target !== button) {
+  if (!e.target.closest('#burger-button')) {
     menu.classList.remove('is-open');
+    button.classList.remove('is-open');
     document.body.classList.remove('no-scroll');
   }
 });
 
-// Крепим слайдер в место header'а
+// КРЕПИМ СЛАЙДЕР В МЕСТО header'а
 
 const header = document.querySelector('header');
 const slider = document.querySelector('.menu__slider-container');
@@ -101,7 +104,7 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(anchor);
 
-/// Делаем кнопку меню активной в слайдере
+/// ДЕЛАЕМ КНОПКУ МЕНЮ АКТИВНОЙ В СЛАЙДЕРЕ
 
 // 1. Находим все ссылки в нашем слайдере
 const menuLinks = document.querySelectorAll('.menu__slider-track .menu__category-button');
@@ -156,7 +159,8 @@ const sectionObserver = new IntersectionObserver((entries) => {
 // 6. Запускаем слежку за каждым заголовком категории
 menuSections.forEach(section => sectionObserver.observe(section));
 
-// Работа с модалкой
+// РАБОТА МОДАЛЬНОГО ОКНА
+
 document.addEventListener('DOMContentLoaded', () => {
   // Переменная, куда мы сохраним данные после загрузки из файла
   let menuData = null;
@@ -164,14 +168,12 @@ document.addEventListener('DOMContentLoaded', () => {
   // 1. Функция загрузки данных из JSON
   async function loadMenuData() {
     try {
-      // Отправляем запрос к файлу (укажите правильный путь к вашему json)
       const response = await fetch('menu.json'); 
       
       if (!response.ok) {
         throw new Error(`Ошибка загрузки: ${response.status}`);
       }
       
-      // Превращаем текст json в JS-объект и сохраняем в нашу переменную
       menuData = await response.json();
       console.log('Данные меню успешно загружены:', menuData);
     } catch (error) {
@@ -198,13 +200,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const mCarbs = document.getElementById('modal-carbs');
   const mAllergensList = document.getElementById('modal-allergens');
 
+  // Элементы переключения контента (Блюда / Сеты)
+  const mIngredientsTitle = document.getElementById('ingredients-title');
+  const mSaucesBlock = document.getElementById('modal-sauces-block');
+  const mSauces = document.getElementById('modal-sauces');
+  const mNutritionBlock = document.getElementById('modal-nutrition-block');
+
   // 3. Функция заполнения модалки
   function fillModal(dishId) {
-    // Проверяем, успели ли загрузиться данные из файла
-    if (!menuData) {
-      console.warn('Данные еще не загрузились, подождите секунду.');
-      return;
-    }
+    if (!menuData) return;
 
     const dish = menuData[dishId];
     if (!dish) return;
@@ -214,11 +218,25 @@ document.addEventListener('DOMContentLoaded', () => {
     mTitle.textContent = dish.title;
     mIngredients.textContent = dish.ingredients;
     
-    mCalories.textContent = dish.nutrition.kcal;
-    mProteins.textContent = dish.nutrition.p;
-    mFats.textContent = dish.nutrition.f;
-    mCarbs.textContent = dish.nutrition.c;
+    // === ПРОВЕРКА: ЕСЛИ ЭТО СЕТ (есть поле sauces) ===
+    if (dish.sauces) {
+      mIngredientsTitle.textContent = 'В сет входят:'; 
+      mSauces.textContent = dish.sauces;               
+      mSaucesBlock.style.display = 'block';            
+      mNutritionBlock.style.display = 'none';          
+    } else {
+      // === ЕСЛИ ЭТО ОБЫЧНОЕ БЛЮДО ===
+      mIngredientsTitle.textContent = 'Состав:';       
+      mSaucesBlock.style.display = 'none';             
+      mNutritionBlock.style.display = 'block';         
 
+      mCalories.textContent = dish.nutrition.kcal;
+      mProteins.textContent = dish.nutrition.p;
+      mFats.textContent = dish.nutrition.f;
+      mCarbs.textContent = dish.nutrition.c;
+    }
+
+    // Блок аллергенов (работает одинаково и для блюд, и для сетов)
     mAllergensList.innerHTML = '';
 
     if (dish.allergens && dish.allergens.length > 0) {
@@ -231,7 +249,7 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       allergenToggle.style.display = 'none';
     }
-  }
+  } // <--- ВОТ ЭТА СКОБКА БЫЛА ПОТЕРЯНА! Теперь функция fillModal официально закрыта.
 
   // 4. Слушатели событий
   openButtons.forEach(button => {
@@ -262,6 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
     allergenDropdown.classList.remove('is-active');
   }
 });
+
 
 // АНИМАЦИИ
 
