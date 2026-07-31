@@ -56,8 +56,20 @@ window.addEventListener('scroll', function() {
 
 // МОБИЛЬНОЕ МЕНЮ ПРИ КЛИКЕ НА КНОПКУ
 
-const button = document.getElementById('burger-button')
-const menu = document.getElementById('mobile-menu')
+const button = document.getElementById('burger-button');
+const menu = document.getElementById('mobile-menu');
+const mobileLinks = document.querySelectorAll('[data-js-mobile-menu-navigation-link]');
+
+// Находим первую и последнюю ссылку в мобильном меню для зацикливания фокуса
+const firstMenuLink = mobileLinks[0];
+const lastMenuLink = mobileLinks[mobileLinks.length - 1];
+
+// Функция обновления доступных состояний кнопки и меню
+function updateMenuState(isOpen) {
+  button.setAttribute('aria-expanded', isOpen);
+  button.setAttribute('aria-label', isOpen ? 'Закрыть меню' : 'Открыть меню');
+  menu.setAttribute('aria-hidden', !isOpen);
+}
 
 
 button.addEventListener('click', () => {
@@ -71,6 +83,36 @@ document.addEventListener('click', (e) => {
     menu.classList.remove('is-open');
     button.classList.remove('is-open');
     document.body.classList.remove('no-scroll');
+  }
+});
+
+// 4. Логика клавиатуры: Клавиша Escape и Ловушка фокуса (Focus Trap)
+document.addEventListener('keydown', (e) => {
+  // Если меню закрыто — клавиатурные перехваты ниже нам не нужны
+  if (!menu.classList.contains('is-open')) return;
+
+  // Закрытие по кнопке Escape
+  if (e.key === 'Escape') {
+    menu.classList.remove('is-open');
+    button.classList.remove('is-open');
+    document.body.classList.remove('no-scroll');
+    updateMenuState(false);
+    button.focus(); // Возвращаем фокус на бургер, чтобы не потеряться
+    return;
+  }
+
+  // Зацикливание фокуса при нажатии Tab
+  if (e.key === 'Tab') {
+    // Если идем назад (Shift + Tab) и стоим на бургер-кнопке
+    if (e.shiftKey && document.activeElement === button) {
+      e.preventDefault();
+      lastMenuLink.focus(); // Перекидываем фокус на ссылку "Контакты"
+    } 
+    // Если идем вперед (просто Tab) и стоим на ссылке "Контакты"
+    else if (!e.shiftKey && document.activeElement === lastMenuLink) {
+      e.preventDefault();
+      button.focus(); // Возвращаем фокус на бургер-кнопку
+    }
   }
 });
 
@@ -128,6 +170,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
       menuLinks.forEach((link) => {
         if (link.getAttribute('href') === `#${id}`) {
           link.classList.add('active');
+          link.setAttribute('aria-current', 'true');
           
           // --- БЕЗОПАСНАЯ АВТОДОКРУТКА (БЕЗ КОНФЛИКТОВ И БАГОВ) ---
           // Высчитываем, сколько нужно прокрутить трек, чтобы кнопка встала по центру
@@ -146,6 +189,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
           
         } else {
           link.classList.remove('active');
+          link.removeAttribute('aria-current');
         }
       });
     }
@@ -249,14 +293,44 @@ document.addEventListener('DOMContentLoaded', () => {
     } else {
       allergenToggle.style.display = 'none';
     }
-  } // <--- ВОТ ЭТА СКОБКА БЫЛА ПОТЕРЯНА! Теперь функция fillModal официально закрыта.
+  }
 
-  // 4. Слушатели событий
+  // Находим все карточки товаров на странице
+  const cardContainers = document.querySelectorAll('.dish__card-content');
+
+  cardContainers.forEach(card => {
+    card.addEventListener('click', (event) => {
+      // 1. Всегда ищем кнопку внутри текущей карточки, на которую кликнули
+      const button = card.querySelector('.open-dish-btn');
+      if (!button) return;
+
+      // 2. Получаем ID блюда прямо из кнопки
+      const dishId = button.getAttribute('data-dish-id');
+
+      // 3. Открываем модальное окно
+      fillModal(dishId);
+      modal.showModal();
+    });
+  });
+
   openButtons.forEach(button => {
-    button.addEventListener('click', () => {
+    button.addEventListener('click', (event) => {
+      event.stopPropagation(); // Защита от всплытия
+
+      // Запоминаем кнопку, на которую кликнули, чтобы потом вернуть фокус
+      lastActiveElement = button; 
+
       const dishId = button.getAttribute('data-dish-id');
       fillModal(dishId);
-      modal.showModal(); 
+      
+      // 1. Сначала открываем окно
+      modal.showModal();
+      
+      // =====================================================================
+      // ИСПРАВЛЕНИЕ ДЛЯ SAFARI: Принудительно передаем фокус на крестик, 
+      // чтобы браузер зафиксировал курсор внутри модального окна
+      // =====================================================================
+      closeButton.focus(); 
     });
   });
 
@@ -273,6 +347,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.addEventListener('click', () => {
     allergenDropdown.classList.remove('is-active');
+  });
+
+  modal.addEventListener('keydown', (e) => {
+    if (e.key === 'Tab') {
+      // Если идем назад (Shift + Tab) и стоим на КРЕСТИКЕ
+      if (e.shiftKey && document.activeElement === closeButton) {
+        e.preventDefault();
+        allergenToggle.focus(); // Перекидываем фокус вперед на КНОПКУ АЛЛЕРГЕНОВ
+      } 
+      // Если идем вперед (просто Tab) и стоим на КНОПКЕ АЛЛЕРГЕНОВ
+      else if (!e.shiftKey && document.activeElement === allergenToggle) {
+        e.preventDefault();
+        closeButton.focus(); // Возвращаем фокус назад на КРЕСТИК
+      }
+    }
   });
 
   function closeModal() {
