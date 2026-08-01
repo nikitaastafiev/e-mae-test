@@ -436,6 +436,10 @@ header.header-hidden {
   pointer-events: none;   
 }
 
+.header.is-scrolled.header-hidden{
+  box-shadow: unset;
+}
+
 .header__inner {
   display: flex;
   justify-content: space-between;
@@ -1155,6 +1159,7 @@ header.header-hidden {
   width: 100%;
   aspect-ratio: 4 / 3;   
   object-fit: cover;
+  /*box-shadow: var(--shadowBefore);*/
 }
 
 /* --- БЛОК ОПИСАНИЕ (цена, название, граммовка) --- */
@@ -1509,7 +1514,7 @@ button.close-modal-btn:focus-visible {
 
 /* --- АДАПТИВНОСТЬ ПОД МОБИЛЬНЫЕ ТЕЛЕФОНЫ --- */
 
-@media (max-width: 700px) {
+@media (max-width: 43.75rem) {
 
   .modal {
     max-width: 26rem;
@@ -1520,14 +1525,16 @@ button.close-modal-btn:focus-visible {
   }
 
   .modal__card-image {
-    height: 250px;
+    /*height: 250px;*/
+    height: auto; /* Убираем жесткие 400px высоты */
+    aspect-ratio: 4 / 3; /* Включаем аккуратные пропорции 4:3 */
   }
 
   .modal-image {
     border-top-left-radius: 1rem;
     border-top-right-radius: 1rem;
     border-bottom-left-radius: 0;
-    max-height: 250px; /* Ограничиваем высоту картинки на смартфонах */
+    /* max-height: 250px; Ограничиваем высоту картинки на смартфонах */
   }
 
   .modal__card-description {
@@ -1538,6 +1545,10 @@ button.close-modal-btn:focus-visible {
   .dish-nutrition ul {
     flex-wrap: wrap; /* КБЖУ перенесется на новую строчку, если не влезет */
     gap: 8px;
+  }
+
+  .allergen__wrapper {
+    margin-block: unset;
   }
 }
 

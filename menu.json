@@ -1,234 +1,332 @@
 {
   "burger_ferrari": {
     "title": "Феррари",
-    "image": "./images/Бургер_Феррари.webp",
+    "image": "./images/burger_ferrari.webp",
     "ingredients": "Черная булка, говяжья котлета,чеддер, бекон, моцарелла, салат айсберг, вишня в вине, соус гриль, соус айоли.",
     "nutrition": { "kcal": "789 ккал", "p": "37 г", "f": "41 г", "c": "69 г" },
     "allergens": ["Глютен", "Лактоза", "Горчица", "Сульфиты", "Кунжут"]
   },
   "burger_white_mers": {
     "title": "Белый Мерс",
-    "image": "./images/Бурег_Белый_Мерс.webp",
+    "image": "./images/burger_mercedes.webp",
     "ingredients": "Пеперони, моцарелла, соус красный, белая булка, куриное филе, чеддер, лук красный, помидор, огурец маринованный, соус айоли.",
     "nutrition": { "kcal": "762 ккал", "p": "38 г", "f": "38 г", "c": "67 г" },
     "allergens": ["Глютен", "Лактоза", "Горчица", "Кунжут"]
   },
   "burger_black_bumer": {
     "title": "Черный Бумер",
-    "image": "./images/Бурге_Черный_Бумер.webp",
+    "image": "./images/burger_black_boomer.webp",
     "ingredients": "Пеперони, моцарелла, соус красный, белая булка, куриное филе, чеддер, лук красный, помидор, огурец маринованный, соус айоли.",
     "nutrition": { "kcal": "769 ккал", "p": "35 г", "f": "39 г", "c": "69 г" },
     "allergens": ["Глютен", "Лактоза", "Горчица", "Кунжут"]
   },
   "burger_porshe 911": {
     "title": "Порш 911",
-    "image": "./images/Бургер_Порш_911.webp",
+    "image": "./images/burger_porsh.webp",
     "ingredients": "Белая булка, котлета на выбор, лук во фритюре, соус айоли, соус BBQ.",
     "nutrition": { "kcal": "851 ккал", "p": "37 г", "f": "41 г", "c": "84 г" },
     "allergens": ["Глютен", "Соя", "Горчица", "Кунжут"]
   },
   "burger_kmaro": {
     "title": "Камаро",
-    "image": "./images/Бургер_Камаро.webp",
+    "image": "./images/burger_kamaro.webp",
     "ingredients": "Белая булка, куриное филе, ананас, чеддер, мятный соус, моцарелла, салат айсберг.",
     "nutrition": { "kcal": "729 ккал", "p": "38 г", "f": "35 г", "c": "67 г" },
     "allergens": ["Глютен", "Лактоза", "Кунжут"]
   },
    "burger_yamaha": {
     "title": "Ямаха МТ-01",
-    "image": "./images/Бургер_Ямаха_МТ-01.webp",
+    "image": "./images/burger_yamaha.webp",
     "ingredients": "Белая булка, говяжья котлета, черри, салат айсберг, чеддер лук красный, огурец маринованный, соус айоли, соус BBQ.",
     "nutrition": { "kcal": "769 ккал", "p": "34 г", "f": "38 г", "c": "73 г" },
     "allergens": ["Глютен", "Лактоза", "Горчица", "Соя", "Кунжут"]
   },
    "burger_audi": {
     "title": "Ауди ТТ",
-    "image": "./images/Бургер_Ауди_ТТ.webp",
+    "image": "./images/burger_audi.webp",
     "ingredients": "Белая булка, говяжья котлета, свежие овощи, соус фреш.",
     "nutrition": { "kcal": "653 ккал", "p": "31 г", "f": "29 г", "c": "67 г" },
     "allergens": ["Глютен", "Лактоза", "Кунжут"]
   },
    "burger_zaporojec": {
     "title": "Запорожец",
-    "image": "./images/Бургер_Запорожец.webp",
+    "image": "./images/burger_zaporojec.webp",
     "ingredients": "Белая булка, котлета на выбор, карамелизованный лук, чеддер, айсберг BBQ, соус айоли.",
     "nutrition": { "kcal": "492 ккал", "p": "21 г", "f": "24 г", "c": "49 г" },
     "allergens": ["Глютен", "Лактоза", "Горчица", "Соя", "Кунжут"]
   },
     "pizza_ham&mushroom": {
     "title": "Ветчина и грибы",
-    "image": "./images/Пицца_Ветчина_Грибы.webp",
+    "image": "./images/pizza_ham_mushrooms.webp",
     "ingredients": "Ветчина, грибы, моцарелла, соус красный.",
     "nutrition": { "kcal": "1339 ккал", "p": "62 г", "f": "42 г", "c": "178 г" },
     "allergens": ["Глютен", "Лактоза"]
   },
    "pizza_peperoni": {
     "title": "Пепперони",
-    "image": "./images/Пицца_Пеперони.webp",
+    "image": "./images/pizza_peperoni.webp",
     "ingredients": "Пеперони, моцарелла, соус красный.",
     "nutrition": { "kcal": "1547 ккал", "p": "69 г", "f": "61 г", "c": "178 г" },
     "allergens": ["Глютен", "Лактоза"]
   },
   "pizza_meaty": {
     "title": "Мясная",
-    "image": "./images/Пицца_Мясная.webp",
+    "image": "./images/pizza_meat.webp",
     "ingredients": "Филе курицы, бекон, помидоры, лук, моцарелла, соус красный.",
     "nutrition": { "kcal": "1519 ккал", "p": "74 г", "f": "53 г", "c": "185 г" },
     "allergens": ["Глютен", "Лактоза", "Горчица"]
   },
   "pizza_margarita": {
     "title": "Маргарита",
-    "image": "./images/Пицца_Маргарита.webp",
+    "image": "./images/pizza_margarita.webp",
     "ingredients": "Моцарелла, помидоры, базилик, соус красный.",
     "nutrition": { "kcal": "1274 ккал", "p": "55 г", "f": "36 г", "c": "179 г" },
     "allergens": ["Глютен", "Лактоза"]
   },
    "pizza_4chezz": {
     "title": "4 сыра",
-    "image": "./images/Пицца_4_Сыра.webp",
+    "image": "./images/pizza_quatro_cheese.webp",
     "ingredients": "Моцарелла, дорблю, фета, пармезан, соус белый.",
     "nutrition": { "kcal": "1781 ккал", "p": "81 г", "f": "79 г", "c": "188 г" },
     "allergens": ["Глютен", "Лактоза"]
   },
   "pizza_havai": {
     "title": "Гавайская",
-    "image": "./images/Пицца_Гавайская.webp",
+    "image": "./images/pizza_hawai.webp",
     "ingredients": "Курица, ананас, моцарелла, соус белый.",
     "nutrition": { "kcal": "1469 ккал", "p": "73 г", "f": "49 г", "c": "183 г" },
     "allergens": ["Глютен", "Лактоза"]
   },
    "pizza_BBQ": {
     "title": "BBQ",
-    "image": "./images/Пицца_BBQ.webp",
+    "image": "./images/pizza_bbq.webp",
     "ingredients": "Копченая курица, моцарелла, болгарский перец, лук, соус красный, соус BBQ.",
     "nutrition": { "kcal": "1369 ккал", "p": "66 г", "f": "43 г", "c": "177 г" },
     "allergens": ["Глютен", "Лактоза"]
   },
   "pizza_chizaaaaaaaaar": {
     "title": "Цезарь",
-    "image": "./images/Пицца_Цезарь.webp",
+    "image": "./images/pizza_chizaaaaaar.webp",
     "ingredients": "Курица, черри, айсберг, моцарелла, пармезан, соус цезарь.",
     "nutrition": { "kcal": "1631 ккал", "p": "76 г", "f": "69 г", "c": "172 г" },
     "allergens": ["Глютен", "Лактоза", "Горчица"]
   },
   "pizza_sea": {
     "title": "Морская",
-    "image": "./images/Пицца_Морская.webp",
+    "image": "./images/pizza_sea.webp",
     "ingredients": "Мидии, креветки, лосось, помидоры, моцарелла, соус белый.",
     "nutrition": { "kcal": "1372 ккал", "p": "73 г", "f": "44 г", "c": "170 г" },
     "allergens": ["Глютен", "Лактоза", "Рыба", "Креветки", "Моллюски"]
   },
   "pizza_cheazy_chiken": {
     "title": "Cырный цыпленок",
-    "image": "./images/Пицца_Сырный_Цыпленок.webp",
+    "image": "./images/pizza_cheese_chiken.webp",
     "ingredients": "Филе курицы, моцарелла, соус белый, сырный соус.",
     "nutrition": { "kcal": "1618 ккал", "p": "72 г", "f": "66 г", "c": "183 г" },
     "allergens": ["Глютен", "Лактоза", "Горчица"]
   },
+  "karbonara": {
+    "title": "Паста Карбонара",
+    "image": "./images/pasta_karbonara.webp",
+    "ingredients": "Паста фетучини, бекон, тимьян, белое сухое вино, пармезан.",
+    "nutrition": { "kcal": "818 ккал", "p": "31 г", "f": "45 г", "c": "74 г" },
+    "allergens": ["Глютен", "Лактоза", "Сульфиты"]
+  },
+  "chiken_pasta": {
+    "title": "Паста с курицей и грибами",
+    "image": "./images/pasta_chiken_mushrooms.webp",
+    "ingredients": "Паста фетучини, курица, грибы шампиньоны, пармезан.",
+    "nutrition": { "kcal": "728 ккал", "p": "32 г", "f": "33 г", "c": "78 г" },
+    "allergens": ["Глютен", "Лактоза"]
+  },
+  "shrimp_pasta": {
+    "title": "Паста с креветками",
+    "image": "./images/pasta_shrimp.webp",
+    "ingredients": "Паста фетучини, креветки тигровые, песто, базилик, пармезан, брокколи.",
+    "nutrition": { "kcal": "768 ккал", "p": "34 г", "f": "38 г", "c": "72 г" },
+    "allergens": ["Глютен", "Креветки", "Орехи", "Лактоза"]
+  },
+  "bolognese": {
+    "title": "Паста Болоньезе",
+    "image": "./images/pasta_bolognese.webp",
+    "ingredients": "Паста феттучини, свино говяжий фарш. томатный соус, пармезан.",
+    "nutrition": { "kcal": "658 ккал", "p": "34 г", "f": "20 г", "c": "85 г" },
+    "allergens": ["Глютен", "Лактоза"]
+  },
+  "chiken_udon": {
+    "title": "Удон с курицей",
+    "image": "./images/udon_chiken.webp",
+    "ingredients": "Лапша удон, курица, перец болгарский, цукини, баклажан, кунжут, морковь, соевый соус.",
+    "nutrition": { "kcal": "499 ккал", "p": "31 г", "f": "16 г", "c": "58 г" },
+    "allergens": ["Глютен", "Соя", "Кунжут"]
+  },
+  "pork_udon": {
+    "title": "Удон со свининой",
+    "image": "./images/udon_pork.webp",
+    "ingredients": "Лапша удон, свинина, перец болгарский, цукини, баклажан, морковь, кунжут, соус соевый.",
+    "nutrition": { "kcal": "633 ккал", "p": "28 г", "f": "21 г", "c": "83 г" },
+    "allergens": ["Глютен", "Соя", "Кунжут"]
+  },
+  "shrimp_udon": {
+    "title": "Удон с креветкой",
+    "image": "./images/udon_shrimp.webp",
+    "ingredients": "Лапша удон, креветка, перец болгарский, цукини, баклажан, морковь, соевый соус, кунжут.",
+    "nutrition": { "kcal": "552 ккал", "p": "29 г", "f": "16 г", "c": "73 г" },
+    "allergens": ["Глютен", "Соя", "Кунжут", "Креветки"]
+  },
+  "chiken_сaesar": {
+    "title": "Цезарь с курицей",
+    "image": "./images/salad_chiken.webp",
+    "ingredients": "Филе курицы, салат айсберг, багет, пармезан, помидоры чери, соус цезарь.",
+    "nutrition": { "kcal": "483 ккал", "p": "28 г", "f": "30 г", "c": "26 г" },
+    "allergens": ["Глютен", "Лактоза", "Горчица", "Яйца"]
+  },
+   "shrimp_сaesar": {
+    "title": "Цезарь с креветкой",
+    "image": "./images/salad_shrimp.webp",
+    "ingredients": "Креветки тигровые, салат айсберг, багет, пармезан, помидоры черри, соус цезарь.",
+    "nutrition": { "kcal": "460 ккал", "p": "28 г", "f": "27 г", "c": "26 г" },
+    "allergens": ["Глютен", "Лактоза", "Горчица", "Креветки"]
+  },
+   "greek_salad": {
+    "title": "Греческий",
+    "image": "./images/salad_greek.webp",
+    "ingredients": "Перец болгарский, огурец, помидоры, салат айсберг, сыр фетта, оливки, помидоры черри, заправка.",
+    "nutrition": { "kcal": "345 ккал", "p": "6 г", "f": "30 г", "c": "13 г" },
+    "allergens": ["Лактоза", "Горчица"]
+  },
+  "chiken_roast": {
+    "title": "Сковородка с курицей",
+    "image": "./images/roast_chiken.webp",
+    "ingredients": "Картофельные дольки, помидоры, лук, специи, шампиньоны, филе курицы.",
+    "nutrition": { "kcal": "393 ккал", "p": "25 г", "f": "10 г", "c": "51 г" },
+    "allergens": ["Глютен", "Лактоза"]
+  },
+   "pork_roast": {
+    "title": "Сковородка со свининой",
+    "image": "./images/roast_pork.webp",
+    "ingredients": "Картофельные дольки, помидоры, лук, специи, шампиньоны, бекон, свинина.",
+    "nutrition": { "kcal": "488 ккал", "p": "21 г", "f": "25 г", "c": "45 г" },
+    "allergens": ["Глютен"]
+  },
   "tereiaky_hearts": {
     "title": "Сердечки терияки",
-    "image": "./images/Сердечки_Терияки.webp",
+    "image": "./images/hearts_tereiaky.webp",
     "ingredients": "Сердечки куриные, соус соевый, соус терияки, кунжут.",
     "nutrition": { "kcal": "470 ккал", "p": "41 г", "f": "23 г", "c": "25 г" },
     "allergens": ["Глютен", "Соя", "Кунжут"]
   },
   "ribs": {
     "title": "Ребрышки",
-    "image": "./images/Свиные_Рёбра.webp",
+    "image": "./images/ribs.webp",
     "ingredients": "Рёбра свиные, соус BBQ.",
     "nutrition": { "kcal": "846 ккал", "p": "44 г", "f": "58 г", "c": "38 г" },
     "allergens": ["Глютен", "Соя", "Горчица"]
   },
   "chilly_wings": {
     "title": "Крылышки чили",
-    "image": "./images/Крылышки_Чили.webp",
+    "image": "./images/wings_chilly.webp",
     "ingredients": "Крылья куриные, сладкий чили, укроп.",
     "nutrition": { "kcal": "470 ккал", "p": "31 г", "f": "24 г", "c": "35 г" },
     "allergens": ["Глютен"]
   },
   "BBQ_wings": {
     "title": "Крылышки BBQ",
-    "image": "./images/Крылышки_BBQ.webp",
+    "image": "./images/wings_bbq.webp",
     "ingredients": "Крылья куриные, соус BBQ, зелёный лук.",
     "nutrition": { "kcal": "697 ккал", "p": "55 г", "f": "40 г", "c": "28 г" },
     "allergens": ["Глютен", "Соя"]
   },
   "tereiaky_wings": {
     "title": "Крылышки терияки",
-    "image": "./images/Крылышки_Терияки.webp",
+    "image": "./images/wings_tereiaky.webp",
     "ingredients": "Куриные крылья, соус терияки, кунжут.",
     "nutrition": { "kcal": "693 ккал", "p": "56 г", "f": "41 г", "c": "26 г" },
     "allergens": ["Глютен", "Соя", "Кунжут"]
   },
   "shriracha_wings": {
     "title": "Крылышки шрирача",
-    "image": "./images/Крылышки_Шрирача.webp",
+    "image": "./images/wings_shriracha.webp",
     "ingredients": "Куриные крылья, соус шрирача, перец чили.",
     "nutrition": { "kcal": "579 ккал", "p": "55 г", "f": "37 г", "c": "7 г" },
     "allergens": ["Глютен", "Сульфиты"]
   },
   "fry_shrimps": {
     "title": "Креветки жареные",
-    "image": "./images/Креветки_Жаренные.webp",
+    "image": "./images/shrimps_fry.webp",
     "ingredients": "Креветки, специи, укроп, лимон, чеснок.",
     "nutrition": { "kcal": "608 ккал", "p": "55 г", "f": "38 г", "c": "13 г" },
     "allergens": ["Креветки"]
   },
   "stew_shrimps": {
     "title": "Креветки варёные в пивном тузлуkе",
-    "image": "./images/Креветки_В_Пиве.webp",
+    "image": "./images/shrimps_stew.webp",
     "ingredients": "Креветки, пивной маринад, специи, укроп, лимон, чеснок.",
     "nutrition": { "kcal": "264 ккал", "p": "52 г", "f": "3 г", "c": "7 г" },
     "allergens": ["Креветки", "Глютен"]
   },
   "squid_rings": {
-    "title": "Кольца кальмара в панировке ФРИ",
-    "image": "./images/Кольца_Кальмара.webp",
+    "title": "Кольца кальмара в панировке",
+    "image": "./images/rings_squid.webp",
     "ingredients": "Кальмар кольцами, панировка, специи.",
     "nutrition": { "kcal": "428 ккал", "p": "26 г", "f": "21 г", "c": "35 г" },
     "allergens": ["Глютен", "Моллюски"]
   },
   "tiger_shrimps": {
     "title": "Тигровые креветки в панировке",
-    "image": "./images/Креветки_В_Панировке.webp",
+    "image": "./images/shrimps_tiger.webp",
     "ingredients": "Креветки тигровые, панировка, специи.",
     "nutrition": { "kcal": "448 ккал", "p": "27 г", "f": "21 г", "c": "37 г" },
     "allergens": ["Глютен", "Лактоза", "Яйца"]
   },
   "baked_mussels": {
     "title": "Мидии запечённые",
-    "image": "./images/Мидии_Запечённые.webp",
+    "image": "./images/mussels.webp",
     "ingredients": "Мидии, соевый соус, чесночный соус, пармезан, моцарелла.",
     "nutrition": { "kcal": "356 ккал", "p": "24 г", "f": "26 г", "c": "7 г" },
     "allergens": ["Моллюски", "Лактоза", "Горчица", "Соя"]
   },
   "garlik_сroutons": {
     "title": "Гренки чесночные",
-    "image": "./images/Гренки_Чесночные.webp",
+    "image": "./images/croutons.webp",
     "ingredients": "Хлеб, масло оливковое, специи.",
     "nutrition": { "kcal": "502 ккал", "p": "7 г", "f": "31 г", "c": "50 г" },
     "allergens": ["Глютен"]
   },
-  "cheazy_stiks": {
-    "title": "Сырные палочки «Моцарелла»",
-    "image": "./images/Сырные_Палочки.webp",
-    "ingredients": "Сыр моцарелла, панировка.",
-    "nutrition": { "kcal": "421 ккал", "p": "18 г", "f": "24 г", "c": "33 г" },
-    "allergens": ["Глютен", "Лактоза", "Яйца"]
-  },
   "french_fries": {
     "title": "Картофель ФРИ",
-    "image": "./images/Картофель_Фри.webp",
+    "image": "./images/fries_french.webp",
     "ingredients": "Картофель, соль, перец, паприка.",
     "nutrition": { "kcal": "272 ккал", "p": "4 г", "f": "15 г", "c": "30 г" },
     "allergens": []
   },
   "сountry-style potatoes": {
     "title": "Картофель по деревенски",
-    "image": "./images/Картофель_Деревенский.webp",
+    "image": "./images/fries_country.webp",
     "ingredients": "Картофель, соль, перец, паприка.",
     "nutrition": { "kcal": "274 ккал", "p": "4 г", "f": "13 г", "c": "35 г" },
     "allergens": []
+  },
+   "cheazy_stiks": {
+    "title": "Сырные палочки «Моцарелла»",
+    "image": "./images/stiks_cheazy.webp",
+    "ingredients": "Сыр моцарелла, панировка.",
+    "nutrition": { "kcal": "421 ккал", "p": "18 г", "f": "24 г", "c": "33 г" },
+    "allergens": ["Глютен", "Лактоза", "Яйца"]
+  },
+  "chiken_strips": {
+    "title": "Стрипсы куриные",
+    "image": "./images/chiken_strips.webp",
+    "ingredients": "Филе курицы, специи, панировка.",
+    "nutrition": { "kcal": "313 ккал", "p": "21 г", "f": "15 г", "c": "24 г" },
+    "allergens": ["Глютен", "Яйца"]
+  },
+  "onion_rings": {
+    "title": "Луковые кольца",
+    "image": "./images/rings_onion.webp",
+    "ingredients": "Лук, специи, панировка.",
+    "nutrition": { "kcal": "479 ккал", "p": "7 г", "f": "25 г", "c": "57 г" },
+    "allergens": ["Глютен", "Лактоза", "Яйца"]
   },
   "potato_chips": {
     "title": "Чипсы картофельные",
@@ -237,166 +335,67 @@
     "nutrition": { "kcal": "272 ккал", "p": "4 г", "f": "13 г", "c": "30 г" },
     "allergens": []
   },
-  "onion_rings": {
-    "title": "Луковые кольца",
-    "image": "./images/Луковые_Кольца.webp",
-    "ingredients": "Лук, специи, панировка.",
-    "nutrition": { "kcal": "479 ккал", "p": "7 г", "f": "25 г", "c": "57 г" },
-    "allergens": ["Глютен", "Лактоза", "Яйца"]
-  },
-  "chiken_strips": {
-    "title": "Стрипсы куриные",
-    "image": "./images/Куринные_Стрипсы.webp",
-    "ingredients": "Филе курицы, специи, панировка.",
-    "nutrition": { "kcal": "313 ккал", "p": "21 г", "f": "15 г", "c": "24 г" },
-    "allergens": ["Глютен", "Яйца"]
-  },
-  "karbonara": {
-    "title": "Паста Карбонара",
-    "image": "./images/Паста_Карбонара.webp",
-    "ingredients": "Паста фетучини, бекон, тимьян, белое сухое вино, пармезан.",
-    "nutrition": { "kcal": "818 ккал", "p": "31 г", "f": "45 г", "c": "74 г" },
-    "allergens": ["Глютен", "Лактоза", "Сульфиты"]
-  },
-  "chiken_pasta": {
-    "title": "Паста с курицей и грибами",
-    "image": "./images/Паста_С_Курицей_И_Грибами.webp",
-    "ingredients": "Паста фетучини, курица, грибы шампиньоны, пармезан.",
-    "nutrition": { "kcal": "728 ккал", "p": "32 г", "f": "33 г", "c": "78 г" },
-    "allergens": ["Глютен", "Лактоза"]
-  },
-  "shrimp_pasta": {
-    "title": "Паста с креветками",
-    "image": "./images/Паста_С_Креветкой.webp",
-    "ingredients": "Паста фетучини, креветки тигровые, песто, базилик, пармезан, брокколи.",
-    "nutrition": { "kcal": "768 ккал", "p": "34 г", "f": "38 г", "c": "72 г" },
-    "allergens": ["Глютен", "Креветки", "Орехи", "Лактоза"]
-  },
-  "bolognese": {
-    "title": "Паста Болоньезе",
-    "image": "./images/Паста_Болоньезе.webp",
-    "ingredients": "Паста феттучини, свино говяжий фарш. томатный соус, пармезан.",
-    "nutrition": { "kcal": "658 ккал", "p": "34 г", "f": "20 г", "c": "85 г" },
-    "allergens": ["Глютен", "Лактоза"]
-  },
-  "chiken_udon": {
-    "title": "Удон с курицей",
-    "image": "./images/Удон_С_Курицей.webp",
-    "ingredients": "Лапша удон, курица, перец болгарский, цукини, баклажан, кунжут, морковь, соевый соус.",
-    "nutrition": { "kcal": "499 ккал", "p": "31 г", "f": "16 г", "c": "58 г" },
-    "allergens": ["Глютен", "Соя", "Кунжут"]
-  },
-  "pork_udon": {
-    "title": "Удон со свининой",
-    "image": "./images/Удон_Со_Свининой.webp",
-    "ingredients": "Лапша удон, свинина, перец болгарский, цукини, баклажан, морковь, кунжут, соус соевый.",
-    "nutrition": { "kcal": "633 ккал", "p": "28 г", "f": "21 г", "c": "83 г" },
-    "allergens": ["Глютен", "Соя", "Кунжут"]
-  },
-  "shrimp_udon": {
-    "title": "Удон с креветкой",
-    "image": "./images/Удон_С_Креветкой.webp",
-    "ingredients": "Лапша удон, креветка, перец болгарский, цукини, баклажан, морковь, соевый соус, кунжут.",
-    "nutrition": { "kcal": "552 ккал", "p": "29 г", "f": "16 г", "c": "73 г" },
-    "allergens": ["Глютен", "Соя", "Кунжут", "Креветки"]
-  },
-  "chiken_сaesar": {
-    "title": "Цезарь с курицей",
-    "image": "./images/Цезарь_С_Курицей.webp",
-    "ingredients": "Филе курицы, салат айсберг, багет, пармезан, помидоры чери, соус цезарь.",
-    "nutrition": { "kcal": "483 ккал", "p": "28 г", "f": "30 г", "c": "26 г" },
-    "allergens": ["Глютен", "Лактоза", "Горчица", "Яйца"]
-  },
-   "shrimp_сaesar": {
-    "title": "Цезарь с креветкой",
-    "image": "./images/Цезарь_С_Креветкой.webp",
-    "ingredients": "Креветки тигровые, салат айсберг, багет, пармезан, помидоры черри, соус цезарь.",
-    "nutrition": { "kcal": "460 ккал", "p": "28 г", "f": "27 г", "c": "26 г" },
-    "allergens": ["Глютен", "Лактоза", "Горчица", "Креветки"]
-  },
-   "greek_salad": {
-    "title": "Греческий",
-    "image": "./images/Салат_Греческий.webp",
-    "ingredients": "Перец болгарский, огурец, помидоры, салат айсберг, сыр фетта, оливки, помидоры черри, заправка.",
-    "nutrition": { "kcal": "345 ккал", "p": "6 г", "f": "30 г", "c": "13 г" },
-    "allergens": ["Лактоза", "Горчица"]
-  },
-  "chiken_roast": {
-    "title": "Сковородка с курицей",
-    "image": "./images/Жаркое_С_Курицей.webp",
-    "ingredients": "Картофельные дольки, помидоры, лук, специи, шампиньоны, филе курицы.",
-    "nutrition": { "kcal": "393 ккал", "p": "25 г", "f": "10 г", "c": "51 г" },
-    "allergens": ["Глютен", "Лактоза"]
-  },
-   "pork_roast": {
-    "title": "Сковородка со свининой",
-    "image": "./images/Жаркое_Со_Свининой.webp",
-    "ingredients": "Картофельные дольки, помидоры, лук, специи, шампиньоны, бекон, свинина.",
-    "nutrition": { "kcal": "488 ккал", "p": "21 г", "f": "25 г", "c": "45 г" },
-    "allergens": ["Глютен"]
-  },
   "set_E-mae": {
   "title": "Фирменный сет «Ё-маё»",
-  "image": "./images/Сет_Фирменный.webp",
+  "image": "./images/set_emae.webp",
   "ingredients": "Четыре порции крыльев.",
   "sauces": "BBQ, чили, терияки, шрирача",
   "allergens": ["Глютен", "Соя", "Кунжут", "Сульфиты"]
   },
   "set_some_shit": {
   "title": "Хрень какая-то",
-  "image": "./images/Сет_Хрень_Какая-то.webp",
+  "image": "./images/set_some_shit.webp",
   "ingredients": "Рёбра свиные, гренки чесночные, луковые кольца, картофель фри.",
   "sauces": "Кетчуп, 1000 островов.",
   "allergens": ["Глютен", "Соя", "Горчица", "Лактоза"]
   },
   "set_obana": {
   "title": "Обана",
-  "image": "./images/Сет_Обана.webp",
+  "image": "./images/set_obana.webp",
   "ingredients": "Палочки сырные, луковые кольца, картофель фри, наггетсы куриные, гренки чесночные.",
   "sauces": "Кетчуп, чесночный",
   "allergens": ["Глютен", "Лактоза"]
   },
   "set_edrid_madrid": {
   "title": "Едрид мадрид",
-  "image": "./images/Сет_Едрид_Мадрид.webp",
+  "image": "./images/set_edrid_madrid.webp",
   "ingredients": "Крылья острые, гренки чесночные, луковые кольца, сыр косичка.",
   "sauces": "Кетчуп",
   "allergens": ["Глютен", "Лактоза", "Кунжут", "Сульфиты"]
   },
   "set_ekarnyi_babai": {
   "title": "Ëкарный бабай",
-  "image": "./images/Сет_Фирменный.webp",
+  "image": "./images/set_edrid_madrid.webp",
   "ingredients": "Колбаски, наггетсы, салат коу-слоу, перец халапеньо, лук красный, картофель по-деревенски.",
   "sauces": "Кетчуп, горчица",
   "allergens": ["Глютен", "Лактоза"]
   },
   "set_ek-makarek": {
   "title": "Ëк макарёк",
-  "image": "./images/Сет_Ëк_Макарёк.webp",
+  "image": "./images/set_ek_makarek.webp",
   "ingredients": "Колбаски, сырные палочки, луковые кольца, гренки чесночные, копчёный сыр.",
   "sauces": "Кетчуп, 1000 островов.",
   "allergens": ["Глютен", "Лактоза"]
   },
   "set_fu_ti_nu_ti": {
   "title": "Футы-нуты",
-  "image": "./images/Сет_Фирменный.webp",
+  "image": "./images/set_ek_makarek.webp",
   "ingredients": "Креветки в кляре, кольца кальмара, луковые кольца, сырные шарики, долька лимона.",
   "sauces": "Чесночный, 1000 островов",
   "allergens": ["Глютен", "Креветки", "Лактоза"]
   },
   "set_japan_god": {
   "title": "Японский бог",
-  "image": "./images/Сет_Фирменный.webp",
+  "image": "./images/set_ek_makarek.webp",
   "ingredients": "Толстолобик, кета, арахис, сыр копчёный, сухарики.",
   "sauces": "На выбор",
   "allergens": ["Лактоза"]
   },
   "set_elki_palki": {
   "title": "Ëлки-палки",
-  "image": "./images/Сет_Фирменный.webp",
+  "image": "./images/set_ek_makarek.webp",
   "ingredients": "Гренки чесночные, сухарики, арахис, сыр косичка.",
   "sauces": "Чесночный",
   "allergens": ["Глютен", "Лактоза"]
   }
 }
-
