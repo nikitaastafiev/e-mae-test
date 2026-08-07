@@ -5,11 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Лендинг Е-Мае</title>
   <meta name="description" content="Ищете уютное место? В пабе «Ё-Маё» вас ждут сочные бургеры, фирменная пицца, большой выбор свежего пива и настольные игры. Приходите отдохнуть с друзьями!">
+  <!-- 1. Главная иконка для старых браузеров (Internet Explorer и др.) -->
+  <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
+  <!-- 2. Иконки разных размеров для современных десктопных браузеров -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+  <!-- 3. Иконка для устройств Apple (iPhone, iPad), когда сайт сохраняют на экран "Домой" -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+  <!-- 4. Ссылка на манифест для Android-смартфонов (они берут иконки 192x192 и 512x512 оттуда) -->
+  <link rel="manifest" href="./icons/site.webmanifest">
   <link rel="stylesheet" href="styles.css">
+  <script src="./scripts.js" defer></script>
 </head>
 <body>
-  <div class="flow-container">
-    <header class="header" id="header">
+  <div class="flow-container" id="header">
+    <header class="header">
       <div class="header__inner container">
         <a class="header__logo logo" href="#header" aria-label="В начало страницы" title="В начало страницы">
           <img src="./icons/logo.webp"
@@ -340,17 +350,17 @@
                   </li>
                   <!-- Категория: Сеты -->
                   <li>
-                      <a class="menu__category-button" href="#sets" aria-current="true">
-                        <span class="category-icon" aria-hidden="true">
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor">
-                            <path d="M2 17h20v2H2v-2Zm0-2c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v1H2v-1Z"/>
-                            <path d="M12 13a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
-                            <path d="M5 8h1.5v4H5V8Zm2.5-2h1.5v6H7.5V6ZM4 10h1v2H4v-2Z"/>
-                            <path d="M16.5 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3 2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
-                          </svg>
-                        </span>
-                        <span class="category-name">Сеты</span>
-                      </a>
+                    <a class="menu__category-button" href="#sets" aria-current="true">
+                      <span class="category-icon" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor">
+                          <path d="M2 17h20v2H2v-2Zm0-2c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v1H2v-1Z"/>
+                          <path d="M12 13a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
+                          <path d="M5 8h1.5v4H5V8Zm2.5-2h1.5v6H7.5V6ZM4 10h1v2H4v-2Z"/>
+                          <path d="M16.5 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3 2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z"/>
+                        </svg>
+                      </span>
+                      <span class="category-name">Сеты</span>
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -1600,7 +1610,7 @@
               <article class="dish"> <!--Сама карточка-->
                 <div class="dish__card-content"> <!--Контент карточки-->
                   <div class="dish__card-image"><!--Изображение блюда-->
-                    <img class="card-image" src="./images/set_ek_makarek.webp" alt=""
+                    <img class="card-image" src="./images/set_futi_nuti.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
@@ -1762,18 +1772,19 @@
       </footer>
     </div>
   </div>
-  <dialog id="dish-modal" class="modal" aria-labelledby="modal-title">
+  <dialog id="dish-modal" class="modal" aria-labelledby="modal-title" autofocus>
     <div class="modal__card-content ">
+      <div class="modal-focus-trap" tabindex="-1" autofocus></div>
       <button class="close-modal-btn" type="button" aria-label="Закрыть">
         <span aria-hidden="true">&times;</span>
       </button>
       <!-- Левая часть -->
       <div class="modal__card-image">
-        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' width='48' height='48' fill='%23aaaaaa'><path d='M2 17h20v2H2v-2Zm0-2c0-1.1.9-2 2-2h16a2 2 0 0 1 2 2v1H2v-1Z'/><path d='M12 13a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z'/><path d='M5 8h1.5v4H5V8Zm2.5-2h1.5v6H7.5V6ZM4 10h1v2H4v-2Z'/><path d='M16.5 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4Zm3 2a2 2 0 1 0 0-4 2 2 0 0 0 0 4Z'/></svg>" alt="" id="modal-image" class="modal-image" tabindex="-1">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="" id="modal-image" class="modal-image" tabindex="-1">
       </div>
       <!-- Правая часть -->
       <div class="modal__card-description">
-        <h2 id="modal-title" class="dish-title"></h2>
+        <h2 id="modal-title" class="dish-title">Загрузка..</h2>
         <div class="allergen__wrapper">
           <button class="allergen__toggle-button" type="button" aria-label="Показать аллергены" aria-expanded="false">
             <span aria-hidden="true">❗️</span>
@@ -1794,15 +1805,14 @@
         <div class="dish-nutrition" id="modal-nutrition-block">
           <h3>КБЖУ:</h3>
           <ul>
-            <li>Калории: <span id="modal-calories"></span></li>
-            <li>Белки: <span id="modal-proteins"></span></li>
-            <li>Жиры: <span id="modal-fats"></span></li>
-            <li>Углеводы: <span id="modal-carbs"></span></li>
+            <li>Калории:<br><span id="modal-calories"></span></li>
+            <li>Белки:<br><span id="modal-proteins"></span></li>
+            <li>Жиры:<br><span id="modal-fats"></span></li>
+            <li>Углеводы:<br><span id="modal-carbs"></span></li>
           </ul>
         </div>
       </div>
     </div>
   </dialog>
-  <script src="./scripts.js"></script>
 </body>
 </html>
