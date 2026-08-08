@@ -1,3 +1,17 @@
+// ПЕРЕЗАГРУЗКА ОТКРЫВАЕТ САЙТ С СТАРТОВОЙ ТОЧКИ
+
+if (window.history && history.scrollRestoration) {
+  history.scrollRestoration = 'manual';
+}
+
+const navEntries = window.performance?.getEntriesByType('navigation');
+const isReload = navEntries && navEntries[0] && navEntries[0].type === 'reload';
+
+if (isReload && window.location.hash) {
+  window.history.replaceState(null, null, window.location.pathname + window.location.search);
+}
+
+
 // ПЕРЕКЛЮЧАТЕЛЬ ТЕМЫ
 
 let darkmode = localStorage.getItem('dark-mode')
@@ -43,7 +57,7 @@ applySystemTheme(darkModeMediaQuery);
 // 2. Следим за изменениями в системе на лету (например, если сработал таймер ночного режима)
 darkModeMediaQuery.addEventListener('change', applySystemTheme);
 
-// ДОБОВЛЯЮ КЛАСС ЗАГОЛОВКУ ПРИ ПРОЛИСТЫВАНИИ
+// ДОБОВЛЯЮ КЛАСС HEADER'У ПРИ ПРОЛИСТЫВАНИИ
 
 window.addEventListener('scroll', function() {
   const element = document.querySelector('header');
@@ -121,6 +135,7 @@ document.addEventListener('keydown', (e) => {
 const header = document.querySelector('header');
 const slider = document.querySelector('.menu__slider-container');
 const anchor = document.querySelector('#menu__anchor');
+const menuBackBtn = document.querySelector('.menu-back-btn');
 
 // Получаем точную высоту хедера динамически (например, 60px или 80px)
 const headerHeight = header.offsetHeight;
@@ -131,9 +146,15 @@ const observer = new IntersectionObserver((entries) => {
     if (!entry.isIntersecting && entry.boundingClientRect.top < headerHeight) {
       header.classList.add('header-hidden');
       slider.classList.add('is-sticky');
+      if (menuBackBtn) {
+        menuBackBtn.removeAttribute('inert');
+      }
     } else {
       header.classList.remove('header-hidden');
       slider.classList.remove('is-sticky');
+      if (menuBackBtn) {
+        menuBackBtn.setAttribute('inert', '');
+      }
     }
   });
 }, { 
@@ -146,7 +167,7 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(anchor);
 
-/// ДЕЛАЕМ КНОПКУ МЕНЮ АКТИВНОЙ В СЛАЙДЕРЕ
+/// ДЕЛАЕМ КНОПКИ МЕНЮ АКТИВНОЙ В СЛАЙДЕРЕ
 
 // 1. Находим все ссылки в нашем слайдере
 const menuLinks = document.querySelectorAll('.menu__slider-track .menu__category-button');
@@ -330,7 +351,11 @@ document.addEventListener('DOMContentLoaded', () => {
       // ИСПРАВЛЕНИЕ ДЛЯ SAFARI: Принудительно передаем фокус на крестик, 
       // чтобы браузер зафиксировал курсор внутри модального окна
       // =====================================================================
-      closeButton.focus(); 
+      //closeButton.focus(); 
+      const mTitle = document.getElementById('modal-title');
+      if (mTitle) {
+        mTitle.focus();
+      }
     });
   });
 
@@ -352,7 +377,7 @@ document.addEventListener('DOMContentLoaded', () => {
   modal.addEventListener('keydown', (e) => {
     if (e.key === 'Tab') {
       // Если идем назад (Shift + Tab) и стоим на КРЕСТИКЕ
-      if (e.shiftKey && document.activeElement === closeButton) {
+      if (e.shiftKey && (document.activeElement === closeButton || document.activeElement === modal.querySelector('.modal-focus-trap'))) {
         e.preventDefault();
         allergenToggle.focus(); // Перекидываем фокус вперед на КНОПКУ АЛЛЕРГЕНОВ
       } 
@@ -394,4 +419,3 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   elementsToAnimate.forEach(element => animationObserver.observe(element));
 });
-

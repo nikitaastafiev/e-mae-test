@@ -139,6 +139,7 @@ body {
   /* --- Унифицированный интерлиньяж --- */
   
   line-height: 1.5;
+
 }
 
 /* --- Нормализация поведения ссылки --- */
@@ -147,10 +148,6 @@ a {
   text-decoration: none;
   font: inherit;
   color: var(--color-main-dark);
-}
-
-a:hover {
-  color:var(--color-accent);
 }
 
 /* --- Нормализация высоты элемента ссылки при его инспектировании в DevTools --- */
@@ -203,12 +200,11 @@ button * {
   pointer-events: none;
 }
 
-/* --- Глобальные стили от меня --- */
+/* Глобальный фокус для всей навигации с клавиатуры Tab */
 
 :focus-visible {
-  outline-color: var(--color-main-dark) !important; /* Твой фирменный цвет вместо дефолтного синего */
-  outline-width: 3px; /* Делаем обводку чуть толще и заметнее (по умолчанию она тонкая 1px) */
-  outline-offset: 3px; /* Делаем красивый аккуратный отступ от границ элемента */
+  outline: 1px solid var(--color-main-dark) !important; /* Твой фирменный цвет вместо дефолтного синего */
+  outline-offset: 1px; /* Делаем красивый аккуратный отступ от границ элемента */
 }
 
 /* --- ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ --- */
@@ -287,8 +283,8 @@ body {
   text-rendering: optimizeLegibility;
   background-color: var(--color-main-light);
   color: var(--color-main-dark);
-  padding-top: 112px;
-  min-width: 360px;
+  padding-top: 6.188rem;
+  min-width: 22.5rem;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -422,18 +418,19 @@ header.header-hidden {
 
 .header__logo {
   flex-shrink: 0;
+  /* ИСПРАВЛЕНИЕ: Говорим видеокарте заранее подготовить память под оптимизацию фильтра */
+  will-change: filter;
+  transform: translateZ(0); /* Пинаем движок Safari задействовать GPU */
   transition: filter var(--base-transition-duration) ease;
 }
 
-.header__logo:hover {
-  /* Мягкая темная тень строго по контуру букв логотипа */
+/*.header__logo:hover {
   filter: drop-shadow(0 2px 8px var(--color-accent-light));
 }
-
-.dark-mode .header__logo:hover {
-  /* Сочное светлое неоновое свечение вокруг логотипа на черном фоне */
+*/
+/*.dark-mode .header__logo:hover {
   filter: drop-shadow(0 0 8px var(--color-accent-light));
-}
+}*/
 
 @media (max-width: 48em) {
   .header__logo {
@@ -473,19 +470,17 @@ header.header-hidden {
               text-shadow var(--base-transition-duration) ease;
 }
 
-.header-menu-link:hover {
-  color: var(--color-accent-light); /* Текст меняет цвет на оранжевый */
-  /* Двойная тень: первая (четкая) слегка приподнимает буквы,  вторая (размытая) создает глубокий объемный занавес */
+/*.header-menu-link:hover {
+  color: var(--color-accent-light); 
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 
                0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .dark-mode .header-menu-link:hover {
-  color: var(--color-accent-light); /* На темной теме текст тоже станет оранжевым при ховере */
-  /* Двойное белое свечение: внутреннее плотное + внешнее широкое рассеивание. Белые буквы на черном фоне теперь будут эффектно "загораться" */
+  color: var(--color-accent-light); 
   text-shadow: 0 0 4px rgba(255, 255, 255, 0.6), 
                0 0 10px rgba(255, 255, 255, 0.3); 
-}
+}*/
 
 /* --- ПЕРЕКЛЮЧАТЕЛЬ ТЕМ --- */
 
@@ -497,10 +492,10 @@ header.header-hidden {
   transition: border-color 0.3s;
 }
 
-.theme-switcher:hover {
+/*.theme-switcher:hover {
   border-color: var(--color-accent);
   transition: border-color 0.3s;
-}
+}*/
 
 .theme-switcher:has(.theme-switcher__checkbox:focus-visible) {
   outline: 2px solid var(--color-accent);
@@ -715,9 +710,9 @@ header.header-hidden {
   box-shadow: var(--shadowBefore);
 }
 
-.hero__button:hover {
+/*.hero__button:hover {
   background-color: var(--color-accent-light);
-}
+}*/
 
 .hero__button-icon {
   display: flex;
@@ -757,9 +752,9 @@ header.header-hidden {
   transition-duration: var(--base-transition-duration);
 }
 
-.beer:hover {
+/*.beer:hover {
   box-shadow: var(--shadowAfter);
-}
+}*/
 
 .beer__card-content{
   display: grid;
@@ -919,7 +914,7 @@ header.header-hidden {
   align-items: center;    
   gap: 0.75rem;
   overflow-x: auto;
-  scroll-behavior: smooth;
+  /*scroll-behavior: smooth;*/
   position: relative;
   height: 100%;
   -webkit-overflow-scrolling: touch;
@@ -964,12 +959,13 @@ header.header-hidden {
   text-decoration: none;
   cursor: pointer;
   background-color: transparent;
-  flex-shrink: 0;                  
+  flex-shrink: 0;               
   transition: width 0.35s ease-in-out, 
               height 0.35s ease-in-out, 
               opacity 0.25s ease-in-out, 
               margin 0.35s ease-in-out,
-              filter var(--base-transition-duration) ease;
+              filter var(--base-transition-duration) ease,
+              visibility 0.35s allow-discrete;
 }
 
 .menu-back-btn:focus-visible {
@@ -981,13 +977,16 @@ header.header-hidden {
 .menu-back-btn img {
   position: relative;
   object-fit: contain;
-  flex-shrink: 0;   
+  flex-shrink: 0;
+  /* ИСПРАВЛЕНИЕ: Говорим видеокарте заранее подготовить память под оптимизацию фильтра */
+  will-change: filter;
+  transform: translateZ(0); /* Пинаем движок Safari задействовать GPU */
   transition: all 0.35s ease-in-out;  
 }
 
-.menu-back-btn img:hover{
+/*.menu-back-btn img:hover{
   filter: drop-shadow(0 0 8px var(--color-accent-light));
-}
+}*/
 
 .menu__slider-container.is-sticky .menu-back-btn {
   position: sticky;
@@ -1024,9 +1023,9 @@ header.header-hidden {
   }
 }
 
-.menu__category-button:hover {
+/*.menu__category-button:hover {
   background-color: var(--color-accent-light);
-}
+}*/
 
 /* Активное состояние */
 .menu__category-button.active {
@@ -1074,11 +1073,11 @@ header.header-hidden {
   box-shadow: var(--shadowBefore);
 }
 
-.dish:hover {
+/*.dish:hover {
   box-shadow: var(--shadowAfter);
   transition-duration: var(--base-transition-duration);
   cursor: pointer;
-}
+}*/
 @media (max-width: 48em) {
   .dish { 
     padding: 1.125rem; 
@@ -1113,9 +1112,9 @@ header.header-hidden {
   transition: filter var(--base-transition-duration) ease;
 }
 
-.dish:hover .dish__card-image {
+/*.dish:hover .dish__card-image {
   filter: brightness(0.85); 
-}
+}*/
 
 .card-image {
   border-radius: 1.25rem;
@@ -1186,11 +1185,11 @@ header.header-hidden {
   transition: box-shadow var(--base-transition-duration) ease;
 }
 
-.dish__card-button:hover {
+/*.dish__card-button:hover {
   box-shadow: -4px -4px 12px rgba(0, 0, 0, 0), 
     4px 4px 20px rgba(0, 0, 0, 0), 
-    var(--box-shadow-inset-2); ;
-}
+    var(--box-shadow-inset-2);
+}*/
 
 .dish__card-button::after {
   content: "";
@@ -1287,6 +1286,12 @@ header.header-hidden {
   min-height: 25rem;
 }
 
+.modal:focus,
+.modal:focus-visible {
+  outline: none !important;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important; /* Сохраняем только твою красивую тень окна */
+}
+
 .modal-focus-trap {
   position: absolute;
   top: 0;
@@ -1337,12 +1342,12 @@ button.close-modal-btn:focus-visible {
   outline: none !important;
   box-shadow: 
     0 0 0 2px #ffffff, 
-    0 0 0 4px #333333 !important; /* Появится ТОЛЬКО от Tab */
+    0 0 0 3px #333333 !important; /* Появится ТОЛЬКО от Tab */
 }
 
-.close-modal-btn:hover {
+/*.close-modal-btn:hover {
   transform: scale(1.1);
-}
+}*/
 
 /* --- ВНУТРЕННЕЕ НАПОЛНЕНИЕ КАРТОЧКИ --- */
 
@@ -1370,6 +1375,13 @@ button.close-modal-btn:focus-visible {
   font-size: var(--font-size-title);
   font-weight: 700;
   padding-right: 1.5rem; /* Чтобы текст не заезжал под крестик */
+}
+
+
+.dish-title:focus,
+.dish-title:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
 }
 
 .dish-ingredients h3,
@@ -1437,10 +1449,10 @@ button.close-modal-btn:focus-visible {
   transition: background-color 0.2s, transform var(--base-transition-duration) ease;
 }
 
-.allergen__toggle-button:hover {
+/*.allergen__toggle-button:hover {
   transform: scale(1.1);
   background-color: #ffe8a1;
-}
+}*/
 
 .allergen-dropdown {
   position: absolute;
@@ -1605,9 +1617,9 @@ button.close-modal-btn:focus-visible {
   transition: box-shadow var(--base-transition-duration) ease;
 }
 
-.contacts-link:hover {
+/*.contacts-link:hover {
   box-shadow: var(--shadowAfter);
-}
+}*/
 
 .contacts-link .i-icon {
   --size: 62.5%;
@@ -1659,3 +1671,82 @@ button.close-modal-btn:focus-visible {
 .delay-header { transition-delay: 0.1s; }
 .delay-hero   { transition-delay: 0.3s; }
 .delay-bar { transition-delay: 0.5s; }
+
+/* --- ЛЕЧИМ ЗАЛИПАНИЕ НА TOUCH УСТРОЙСТВАХ --- */
+
+@media (hover: hover) {
+.header__logo:hover {
+  /* Мягкая темная тень строго по контуру букв логотипа */
+  filter: drop-shadow(0 2px 8px var(--color-accent-light));
+}
+
+.dark-mode .header__logo:hover {
+  /* Сочное светлое неоновое свечение вокруг логотипа на черном фоне */
+  filter: drop-shadow(0 0 8px var(--color-accent-light));
+}
+
+.header-menu-link:hover {
+  color: var(--color-accent-light); /* Текст меняет цвет на оранжевый */
+  /* Двойная тень: первая (четкая) слегка приподнимает буквы,  вторая (размытая) создает глубокий объемный занавес */
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 
+               0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.dark-mode .header-menu-link:hover {
+  color: var(--color-accent-light); /* На темной теме текст тоже станет оранжевым при ховере */
+  /* Двойное белое свечение: внутреннее плотное + внешнее широкое рассеивание. Белые буквы на черном фоне теперь будут эффектно "загораться" */
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.6), 
+               0 0 10px rgba(255, 255, 255, 0.3); 
+}
+
+.theme-switcher:hover {
+  border-color: var(--color-accent);
+  transition: border-color 0.3s;
+}
+
+.hero__button:hover {
+  background-color: var(--color-accent-light);
+}
+
+.beer:hover {
+  box-shadow: var(--shadowAfter);
+}
+
+.menu-back-btn img:hover{
+  filter: drop-shadow(0 0 8px var(--color-accent-light));
+}
+
+.menu__category-button:hover {
+  background-color: var(--color-accent-light);
+}
+
+.dish:hover {
+  box-shadow: var(--shadowAfter);
+  transition-duration: var(--base-transition-duration);
+  cursor: pointer;
+}
+
+.dish:hover .dish__card-image {
+  filter: brightness(0.85); 
+}
+
+.dish__card-button:hover {
+  box-shadow: -4px -4px 12px rgba(0, 0, 0, 0), 
+    4px 4px 20px rgba(0, 0, 0, 0), 
+    var(--box-shadow-inset-2);
+}
+
+.close-modal-btn:hover {
+  transform: scale(1.1);
+}
+
+.allergen__toggle-button:hover {
+  transform: scale(1.1);
+  background-color: #ffe8a1;
+}
+
+.contacts-link:hover {
+  box-shadow: var(--shadowAfter);
+}
+
+}

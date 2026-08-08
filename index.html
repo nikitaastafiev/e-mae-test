@@ -5,6 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Лендинг Е-Мае</title>
   <meta name="description" content="Ищете уютное место? В пабе «Ё-Маё» вас ждут сочные бургеры, фирменная пицца, большой выбор свежего пива и настольные игры. Приходите отдохнуть с друзьями!">
+  <meta property="og:image" content="./icons/android-chrome-512x512.png">
+  <meta property="og:image:type" content="image/png">
   <!-- 1. Главная иконка для старых браузеров (Internet Explorer и др.) -->
   <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
   <!-- 2. Иконки разных размеров для современных десктопных браузеров -->
@@ -248,14 +250,14 @@
           </div>
         </div>
       </section>
-      <section class="section anim-target anim-from-bottom" id="kitchen">
+      <section class="section anim-target anim-from-bottom">
         <div class="container">
           <h2 class="visually-hidden">Кухня</h2> 
           <div>
             <div id="menu__anchor"></div>
-            <div class="menu__slider-container">
+            <div class="menu__slider-container" id="kitchen">
               <div class="menu__slider-track container modifier__slide-track">
-                <a href="#hero" class="menu-back-btn">
+                <a href="#header" class="menu-back-btn" inert>
                   <img src="./icons/logo.webp"
                   alt="Вернутся к началу"
                   loading="lazy"
@@ -1774,7 +1776,7 @@
   </div>
   <dialog id="dish-modal" class="modal" aria-labelledby="modal-title" autofocus>
     <div class="modal__card-content ">
-      <div class="modal-focus-trap" tabindex="-1" autofocus></div>
+      <!--<div class="modal-focus-trap" tabindex="-1" autofocus></div>-->
       <button class="close-modal-btn" type="button" aria-label="Закрыть">
         <span aria-hidden="true">&times;</span>
       </button>
@@ -1784,7 +1786,7 @@
       </div>
       <!-- Правая часть -->
       <div class="modal__card-description">
-        <h2 id="modal-title" class="dish-title">Загрузка..</h2>
+        <h2 id="modal-title" class="dish-title" tabindex="-1" autofocus>Загрузка..</h2>
         <div class="allergen__wrapper">
           <button class="allergen__toggle-button" type="button" aria-label="Показать аллергены" aria-expanded="false">
             <span aria-hidden="true">❗️</span>
