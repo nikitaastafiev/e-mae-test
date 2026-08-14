@@ -365,7 +365,7 @@
   },
   "set_ekarnyi_babai": {
   "title": "Ëкарный бабай",
-  "image": "./images/set_edrid_madrid.webp",
+  "image": "./images/set_ekarnyi_babai.webp",
   "ingredients": "Колбаски, наггетсы, салат коу-слоу, перец халапеньо, лук красный, картофель по-деревенски.",
   "sauces": "Кетчуп, горчица",
   "allergens": ["Глютен", "Лактоза"]
@@ -386,14 +386,14 @@
   },
   "set_japan_god": {
   "title": "Японский бог",
-  "image": "./images/set_ek_makarek.webp",
+  "image": "./images/set_japan_god.webp",
   "ingredients": "Толстолобик, кета, арахис, сыр копчёный, сухарики.",
   "sauces": "На выбор",
   "allergens": ["Лактоза"]
   },
   "set_elki_palki": {
   "title": "Ëлки-палки",
-  "image": "./images/set_ek_makarek.webp",
+  "image": "./images/set_elki_palki.webp",
   "ingredients": "Гренки чесночные, сухарики, арахис, сыр косичка.",
   "sauces": "Чесночный",
   "allergens": ["Глютен", "Лактоза"]
