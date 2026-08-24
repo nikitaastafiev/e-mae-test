@@ -14,8 +14,10 @@
   <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
   <!-- 3. Иконка для устройств Apple (iPhone, iPad), когда сайт сохраняют на экран "Домой" -->
   <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
-  <!-- 4. Ссылка на манифест для Android-смартфонов (они берут иконки 192x192 и 512x512 оттуда) -->
+  <!-- 4. Ссылка на манифест для Android-смартфонов (там иконки) -->
   <link rel="manifest" href="./icons/site.webmanifest">
+  <link rel="preload" href="./fonts/Oswald-Regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="./fonts/RussoOne-Regular.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="styles.css">
   <script src="./scripts.js" defer></script>
 </head>
@@ -128,7 +130,7 @@
                 <div class="beer__card-image">
                   <img class="beer-image" src="./images/beer_czech.webp" alt="">
                 </div>
-                <div class="beer__card-description"><!--Описание блюда-->
+                <div class="beer__card-description">
                   <h3 class="beer__title">Чешское</h3>
                   <div>
                     <b class ="beer__description">Описание</b>
@@ -150,7 +152,7 @@
                 <div class="beer__card-image">
                   <img class="beer-image" src="./images/beer_wheat.webp" alt="">
                 </div>
-                <div class="beer__card-description"><!--Описание блюда-->
+                <div class="beer__card-description">
                   <h3 class="beer__title">Пшеничное</h3>
                   <div>
                     <b class ="beer__description">Описание</b>
@@ -172,7 +174,7 @@
                 <div class="beer__card-image">
                   <img class="beer-image" src="./images/beer_cardymov.webp" alt="">
                 </div>
-                <div class="beer__card-description"><!--Описание блюда-->
+                <div class="beer__card-description">
                   <h3 class="beer__title">Кардымовское</h3>
                   <div>
                     <b class ="beer__description">Описание</b>
@@ -194,7 +196,7 @@
                 <div class="beer__card-image">
                   <img class="beer-image" src="./images/beer_rose.webp" alt="">
                 </div>
-                <div class="beer__card-description"><!--Описание блюда-->
+                <div class="beer__card-description">
                   <h3 class="beer__title">Крымская Роза</h3>
                   <div>
                     <b class ="beer__description">Описание</b>
@@ -334,14 +336,14 @@
             <h3 class="section__title" id="burgers">Бургеры</h3><!--Заголовок категорий блюд-->
             <div class="dishes-category"> <!--Контейнер с карточками блюд-->
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/burger_ferrari.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">380 ₽</p>
                     <h3 class="card-description-name">Феррари</h3>
                     <p class="weight">330 г</p>
@@ -357,14 +359,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/burger_mercedes.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">370 ₽</p>
                     <h3 class="card-description-name">Белый Мерс</h3>
                     <p class="weight">330 г</p>
@@ -380,14 +382,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/burger_black_boomer.webp" alt="" 
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">370 ₽</p>
                     <h3 class="card-description-name">Черный Бумер</h3>
                     <p class="weight">330 г</p>
@@ -403,14 +405,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/burger_porsh.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">380 ₽</p>
                     <h3 class="card-description-name">Порш 911</h3>
                     <p class="weight">330 г</p>
@@ -426,14 +428,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/burger_kamaro.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">360 ₽</p>
                     <h3 class="card-description-name">Камаро</h3>
                     <p class="weight">330 г</p>
@@ -449,14 +451,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                  <div class="dish__card-content"> <!--Контент карточки-->
-                      <div class="dish__card-image"><!--Изображение блюда-->
+                  <div class="dish__card-content"> 
+                      <div class="dish__card-image">
                         <img class="card-image" src="./images/burger_yamaha.webp" alt=""
                           width="720" height="540" 
                           loading="lazy" 
                           decoding="async">
                       </div>
-                      <div class="dish__card-description"><!--Описание блюда-->
+                      <div class="dish__card-description">
                         <p class="card-description-price">390 ₽</p>
                         <h3 class="card-description-name">Ямаха МТ-01</h3>
                         <p class="weight">400 г</p>
@@ -472,14 +474,14 @@
                   </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/burger_audi.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">350 ₽</p>
                     <h3 class="card-description-name">Ауди ТТ</h3>
                     <p class="weight">330 г</p>
@@ -495,14 +497,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/burger_zaporojec.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">280 ₽</p>
                     <h3 class="card-description-name">Запорожец</h3>
                     <p class="weight">185 г</p>
@@ -521,14 +523,14 @@
             <h3 class="section__title" id="pizza">Пицца</h3><!--Заголовок категорий блюд-->
             <div class="dishes-category"> <!--Контейнер с карточками блюд-->
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/pizza_ham_mushrooms.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">540 ₽</p>
                     <h3 class="card-description-name">Ветчина и грибы</h3>
                     <p class="weight">650 г</p>
@@ -544,14 +546,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/pizza_peperoni.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">560 ₽</p>
                     <h3 class="card-description-name">Пепперони</h3>
                     <p class="weight">650 г</p>
@@ -567,14 +569,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/pizza_meat.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">630 ₽</p>
                     <h3 class="card-description-name">Мясная</h3>
                     <p class="weight">700 г</p>
@@ -590,14 +592,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/pizza_margarita.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">520 ₽</p>
                     <h3 class="card-description-name">Маргарита</h3>
                     <p class="weight">650 г</p>
@@ -613,14 +615,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/pizza_quatro_cheese.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">640 ₽</p>
                     <h3 class="card-description-name">4 Сыра</h3>
                     <p class="weight">650 г</p>
@@ -636,14 +638,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/pizza_hawai.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">540 ₽</p>
                     <h3 class="card-description-name">Гавайская</h3>
                     <p class="weight">650 г</p>
@@ -659,14 +661,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/pizza_bbq.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">600 ₽</p>
                     <h3 class="card-description-name">BBQ</h3>
                     <p class="weight">650 г</p>
@@ -682,14 +684,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/pizza_chizaaaaaar.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">540 ₽</p>
                     <h3 class="card-description-name">Цезарь</h3>
                     <p class="weight">700 г</p>
@@ -705,14 +707,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/pizza_sea.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">650 ₽</p>
                     <h3 class="card-description-name">Морская</h3>
                     <p class="weight">650 г</p>
@@ -728,14 +730,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/pizza_cheese_chiken.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">540 ₽</p>
                     <h3 class="card-description-name">Сырный цыппленок</h3>
                     <p class="weight">650 г</p>
@@ -754,14 +756,14 @@
             <h3 class="section__title" id="pasta">Паста</h3><!--Заголовок категорий блюд-->
             <div class="dishes-category"> <!--Контейнер с карточками блюд-->
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/pasta_karbonara.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">390 ₽</p>
                     <h3 class="card-description-name">Карбонара</h3>
                     <p class="weight">250 г</p>
@@ -777,14 +779,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/pasta_chiken_mushrooms.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">390 ₽</p>
                     <h3 class="card-description-name">Паста с курицей и грибами</h3>
                     <p class="weight">250 г</p>
@@ -800,14 +802,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/pasta_shrimp.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">600 ₽</p>
                     <h3 class="card-description-name">Паста с креветками</h3>
                     <p class="weight">300 г</p>
@@ -823,14 +825,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/pasta_bolognese.webp" alt="" 
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">330 ₽</p>
                     <h3 class="card-description-name">Болоньезе</h3>
                     <p class="weight">250 г</p>
@@ -849,14 +851,14 @@
             <h3 class="section__title" id="noodles">Лапша</h3><!--Заголовок категорий блюд-->
             <div class="dishes-category"> <!--Контейнер с карточками блюд-->
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/udon_chiken.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">260 ₽</p>
                     <h3 class="card-description-name">Удон с курицей</h3>
                     <p class="weight">290г</p>
@@ -872,14 +874,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/udon_pork.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">270 ₽</p>
                     <h3 class="card-description-name">Удон со свининой</h3>
                     <p class="weight">280г</p>
@@ -895,14 +897,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/udon_shrimp.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">490 ₽</p>
                     <h3 class="card-description-name">Удон с креветкой</h3>
                     <p class="weight">300 г</p>
@@ -921,14 +923,14 @@
             <h3 class="section__title" id="salads">Салаты</h3><!--Заголовок категорий блюд-->
             <div class="dishes-category"> <!--Контейнер с карточками блюд-->
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/salad_chiken.webp" alt=""
                     width="720" height="540" 
                     loading="lazy" 
                     decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">440 ₽</p>
                     <h3 class="card-description-name">Цезарь с курицей</h3>
                     <p class="weight">250 г</p>
@@ -944,14 +946,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/salad_shrimp.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">550 ₽</p>
                     <h3 class="card-description-name">Цезарь с креветкой</h3>
                     <p class="weight">250 г</p>
@@ -967,14 +969,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/salad_greek.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">390 ₽</p>
                     <h3 class="card-description-name">Греческий</h3>
                     <p class="weight">250 г</p>
@@ -993,14 +995,14 @@
             <h3 class="section__title" id="roast">Горячее</h3><!--Заголовок категорий блюд-->
             <div class="dishes-category"> <!--Контейнер с карточками блюд-->
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/roast_chiken.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">430 ₽</p>
                     <h3 class="card-description-name">Жаркое с курицей</h3>
                     <p class="weight">330 г</p>
@@ -1016,14 +1018,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/roast_pork.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">450 ₽</p>
                     <h3 class="card-description-name">Жаркое со свининой</h3>
                     <p class="weight">330 г</p>
@@ -1039,14 +1041,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/hearts_tereiaky.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">420 ₽</p>
                     <h3 class="card-description-name">Сердечки терияки</h3>
                     <p class="weight">270 г</p>
@@ -1062,14 +1064,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/ribs.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">430 ₽</p>
                     <h3 class="card-description-name">Ребрышки</h3>
                     <p class="weight">300 г</p>
@@ -1085,14 +1087,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/wings_chilly.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">390 ₽</p>
                     <h3 class="card-description-name">Крылышки чили</h3>
                     <p class="weight">300 г</p>
@@ -1108,14 +1110,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/wings_bbq.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">390 ₽</p>
                     <h3 class="card-description-name">Крылышки BBQ</h3>
                     <p class="weight">300 г</p>
@@ -1131,14 +1133,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/wings_tereiaky.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">390 ₽</p>
                     <h3 class="card-description-name">Крылышки терияки</h3>
                     <p class="weight">300 г</p>
@@ -1154,14 +1156,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/wings_shriracha.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">390 ₽</p>
                     <h3 class="card-description-name">Крылышки шрирача</h3>
                     <p class="weight">300 г</p>
@@ -1180,14 +1182,14 @@
             <h3 class="section__title" id="snaks">Закуски</h3><!--Заголовок категорий блюд-->
             <div class="dishes-category"> <!--Контейнер с карточками блюд-->
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/shrimps_fry.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">610 ₽</p>
                     <h3 class="card-description-name">Креветки жареные</h3>
                     <p class="weight">240 г</p>
@@ -1203,14 +1205,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/shrimps_stew.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">610 ₽</p>
                     <h3 class="card-description-name">Креветки варёные в пивном тузлуке</h3>
                     <p class="weight">240г</p>
@@ -1226,14 +1228,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/rings_squid.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">330 ₽</p>
                     <h3 class="card-description-name">Кольца кальмара в панировке</h3>
                     <p class="weight">180 г</p>
@@ -1249,14 +1251,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/shrimps_tiger.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">390 ₽</p>
                     <h3 class="card-description-name">Тигровые креветки в панировке</h3>
                     <p class="weight">180 г</p>
@@ -1272,14 +1274,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/mussels.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">390 ₽</p>
                     <h3 class="card-description-name">Мидии запечённые</h3>
                     <p class="weight">180 г</p>
@@ -1295,14 +1297,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/croutons.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">170 ₽</p>
                     <h3 class="card-description-name">Гренки чесночные</h3>
                     <p class="weight">130 г</p>
@@ -1318,14 +1320,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/fries_french.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">120 ₽</p>
                     <h3 class="card-description-name">Картофель ФРИ</h3>
                     <p class="weight">100 г</p>
@@ -1341,14 +1343,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/fries_country.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">130 ₽</p>
                     <h3 class="card-description-name">Картофель по деревенски</h3>
                     <p class="weight">130 г</p>
@@ -1364,14 +1366,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/stiks_cheazy.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">310 ₽</p>
                     <h3 class="card-description-name">Сырные палочки «Моцарелла»</h3>
                     <p class="weight">130 г</p>
@@ -1387,14 +1389,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/chiken_strips.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">220 ₽</p>
                     <h3 class="card-description-name">Стрипсы куриные</h3>
                     <p class="weight">120 г</p>
@@ -1410,14 +1412,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/rings_onion.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">170 ₽</p>
                     <h3 class="card-description-name">Луковые кольца</h3>
                     <p class="weight">170 г</p>
@@ -1436,14 +1438,14 @@
             <h3 class="section__title" id="sets">Сеты</h3><!--Заголовок категорий блюд-->
             <div class="dishes-category"> <!--Контейнер с карточками блюд-->
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/set_emae.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">960 ₽</p>
                     <h3 class="card-description-name">Фирменный — «Ë-Маё»</h3>
                     <p class="weight">800 г</p>
@@ -1459,14 +1461,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/set_some_shit.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">770 ₽</p>
                     <h3 class="card-description-name">«Хрень какая-то»</h3>
                     <p class="weight">600 г</p>
@@ -1482,14 +1484,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/set_obana.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">720 ₽</p>
                     <h3 class="card-description-name">«Обана»</h3>
                     <p class="weight">600 г</p>
@@ -1505,14 +1507,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/set_edrid_madrid.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">720 ₽</p>
                     <h3 class="card-description-name">«Едрид мадрид»</h3>
                     <p class="weight">500 г</p>
@@ -1528,14 +1530,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/set_ekarnyi_babai.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">720 ₽</p>
                     <h3 class="card-description-name">«Ëкарный бабай»</h3>
                     <p class="weight">620 г</p>
@@ -1551,14 +1553,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/set_ek_makarek.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">720 ₽</p>
                     <h3 class="card-description-name">«Ëк макарёк»</h3>
                     <p class="weight">460 г</p>
@@ -1574,14 +1576,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/set_futi_nuti.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">720 ₽</p>
                     <h3 class="card-description-name">«Футы-нуты»</h3>
                     <p class="weight">550 г</p>
@@ -1597,14 +1599,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/set_japan_god.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">410 ₽</p>
                     <h3 class="card-description-name">«Японский бог»</h3>
                     <p class="weight">235 г</p>
@@ -1620,14 +1622,14 @@
                 </div>
               </article>
               <article class="dish"> <!--Сама карточка-->
-                <div class="dish__card-content"> <!--Контент карточки-->
-                  <div class="dish__card-image"><!--Изображение блюда-->
+                <div class="dish__card-content"> 
+                  <div class="dish__card-image">
                     <img class="card-image" src="./images/set_elki_palki.webp" alt=""
                       width="720" height="540" 
                       loading="lazy" 
                       decoding="async">
                   </div>
-                  <div class="dish__card-description"><!--Описание блюда-->
+                  <div class="dish__card-description">
                     <p class="card-description-price">360 ₽</p>
                     <h3 class="card-description-name">«Ëлки-палки»</h3>
                     <p class="weight">250 г</p>

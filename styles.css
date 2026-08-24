@@ -204,7 +204,7 @@ button * {
 /* Глобальный фокус для всей навигации с клавиатуры Tab */
 
 :focus-visible {
-  outline: 1px solid var(--color-main-dark) !important; /* Твой фирменный цвет вместо дефолтного синего */
+  outline: 1px solid var(--color-main-dark) !important; /* Фирменный цвет вместо дефолтного синего */
   outline-offset: 1px; /* Делаем красивый аккуратный отступ от границ элемента */
 }
 
@@ -242,9 +242,7 @@ button * {
   --border-radius-dish: clamp(1.25rem, 1.1rem + 0.5vw, 1.5rem);
   --padding-dish: clamp(1rem, 0.8rem + 1vw, 1.25rem);
   --border-radius-dish-inner: calc((var(--border-radius-dish) - var(--padding-dish)) * 4.5);
-  --c-white: #fff;
-  --c-dark-for-shadow: #000;
-  --box-shadow-3: -4px -4px 4px hsla(0, 0%, 100%, .05), 1px 1px 4px var(--c-dark-for-shadow);
+  --box-shadow-3: -4px -4px 4px hsla(0, 0%, 100%, .05), 1px 1px 4px var(--color-main-dark-for-shadow);
   --box-shadow-3-transparent: -4px -4px 12px hsla(0, 0%, 100%, 0), 4px 4px 12px transparent;
   --box-shadow-4: -8px -8px 12px hsla(0,0%, 100%,.8), 8px 8px 12px rgba(0,0,0,.05);
   --box-shadow-4-transparent:-8px -8px 12px hsla(0,0%,100%,0),8px 8px 12px transparent;
@@ -310,7 +308,7 @@ body.no-scroll {
   --color-main-dark: #ffffff;
   --shadowBefore: var(--box-shadow-3), var(--box-shadow-inset-transparent);
   --shadowAfter: var(--box-shadow-accent);
-  --box-shadow-4: -4px -4px 12px hsla(0, 0%, 100%, .05), 4px 4px 12px var(--c-dark-for-shadow);
+  --box-shadow-4: -4px -4px 12px hsla(0, 0%, 100%, .05), 4px 4px 12px var(--color-main-dark-for-shadow);
   .theme-switcher__body::after {
     transition: transform var(--base-transition-duration);
     transform: translate3d(0, -50%, 0);
@@ -423,7 +421,7 @@ header.header-hidden {
   flex-shrink: 0;
   /* ИСПРАВЛЕНИЕ: Говорим видеокарте заранее подготовить память под оптимизацию фильтра */
   will-change: filter;
-  transform: translateZ(0); /* Пинаем движок Safari задействовать GPU */
+  transform: translateZ(0); /* Движок Safari должен задействовать GPU */
   transition: filter var(--base-transition-duration) ease;
 }
 
@@ -477,7 +475,7 @@ header.header-hidden {
 
 .theme-switcher:has(.theme-switcher__checkbox:focus-visible) {
   outline: 2px solid var(--color-accent);
-  outline-offset: 4px; /* Делает красивый отступ обводки от элемента */
+  outline-offset: 4px; /* Отступ обводки от элемента */
 }
 
 /* Дополнительно: если фокус активен, можно дублировать цвет бордера, как при ховере */
@@ -499,7 +497,7 @@ header.header-hidden {
 }
 
 .theme-switcher__body::after {
-  background-color: var(--c-white);
+  background-color: var(--color-main-light);
   border-radius: inherit;
   content: "";
   height: var(--iconWrapperWidth);
@@ -962,7 +960,7 @@ header.header-hidden {
   flex-shrink: 0;
   /* ИСПРАВЛЕНИЕ: Говорим видеокарте заранее подготовить память под оптимизацию фильтра */
   will-change: filter;
-  transform: translateZ(0); /* Пинаем движок Safari задействовать GPU */
+  transform: translateZ(0); /* Движок Safari должен задействовать GPU */
   transition: all 0.35s ease-in-out;  
 }
 
@@ -1205,7 +1203,6 @@ header.header-hidden {
 .modal::backdrop {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(4px); /* Легкое размытие сайта на фоне */
-
   transition: 
     background-color 0.4s ease,
     backdrop-filter 0.4s ease,
@@ -1235,7 +1232,7 @@ header.header-hidden {
 .modal:focus,
 .modal:focus-visible {
   outline: none !important;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important; /* Сохраняем только твою красивую тень окна */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3) !important;
 }
 
 .modal-focus-trap {
@@ -1366,7 +1363,7 @@ button.close-modal-btn:focus-visible {
   background-color: var(--color-element-background);
   padding: 0.5rem;
   border-radius: 1rem;
-  text-align: left; /* Центрируем слово и цифру внутри плашки */
+  text-align: left;
   min-width: 3.5rem; 
 }
 
@@ -1446,8 +1443,8 @@ button.close-modal-btn:focus-visible {
   }
 
   .modal__card-image {
-    height: auto; /* Убираем жесткие 400px высоты */
-    aspect-ratio: 4 / 3; /* Включаем аккуратные пропорции 4:3 */
+    height: auto;
+    aspect-ratio: 4 / 3; /* Пропорции 4:3 */
     border-top-left-radius: 2rem;
     border-top-right-radius: 2rem;
   }
@@ -1564,22 +1561,22 @@ button.close-modal-btn:focus-visible {
 .footer-copyright {
   display: flex;
   flex-direction: column; /* Выстраиваем строчки вертикально: одна под другой */
-  gap: var(--gap-for-elements); /* Делаем аккуратный отступ между строчками */
+  gap: var(--gap-for-elements); 
   color: var(--color-accent-unchanged);
   line-height: 1.4;
 }
 
-/* На мобилках до 580px, где у тебя весь футер перестраивается влево */
+/* На мобилках до 580px, где футер перестраивается влево */
 @media (max-width: 36.25em) {
   .footer-copyright {
-    align-items: flex-start; /* Выравниваем текст по левому краю */
+    align-items: flex-start;
   }
 }
 
 /* На десктопе выравниваем по правому краю, так как блок контактов прижат к правому боку */
 @media (min-width: 36.313em) {
   .footer-copyright {
-    align-items: flex-end; /* Текст аккуратно прижмется к правому краю */
+    align-items: flex-end;
     text-align: right;
   }
 }
@@ -1615,25 +1612,23 @@ button.close-modal-btn:focus-visible {
 @media (hover: hover) {
 
   .header__logo:hover {
-    /* Мягкая темная тень строго по контуру букв логотипа */
+    /* Темная тень по контуру букв логотипа */
     filter: drop-shadow(0 2px 8px var(--color-accent-light));
   }
 
   .dark-mode .header__logo:hover {
-    /* Сочное светлое неоновое свечение вокруг логотипа на черном фоне */
+    /* Неоновое свечение вокруг логотипа на черном фоне */
     filter: drop-shadow(0 0 8px var(--color-accent-light));
   }
 
   .header-menu-link:hover {
     color: var(--color-accent-light); /* Текст меняет цвет на оранжевый */
-    /* Двойная тень: первая (четкая) слегка приподнимает буквы,  вторая (размытая) создает глубокий объемный занавес */
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2), 
                 0 2px 6px rgba(0, 0, 0, 0.15);
   }
 
   .dark-mode .header-menu-link:hover {
-    color: var(--color-accent-light); /* На темной теме текст тоже станет оранжевым при ховере */
-    /* Двойное белое свечение: внутреннее плотное + внешнее широкое рассеивание. Белые буквы на черном фоне теперь будут эффектно "загораться" */
+    color: var(--color-accent-light); /* Текст меняет цвет на оранжевый */
     text-shadow: 0 0 4px rgba(255, 255, 255, 0.6), 
                 0 0 10px rgba(255, 255, 255, 0.3); 
   }

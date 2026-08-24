@@ -54,7 +54,7 @@ function applySystemTheme(e) {
 // 1. Проверяем тему сразу при загрузке сайта
 applySystemTheme(darkModeMediaQuery);
 
-// 2. Следим за изменениями в системе на лету (например, если сработал таймер ночного режима)
+// 2. Следим за изменениями в системе (например, если сработал таймер ночного режима)
 darkModeMediaQuery.addEventListener('change', applySystemTheme);
 
 // ДОБОВЛЯЮ КЛАСС HEADER'У ПРИ ПРОЛИСТЫВАНИИ
@@ -167,12 +167,12 @@ const observer = new IntersectionObserver((entries) => {
 
 observer.observe(anchor);
 
-/// ДЕЛАЕМ КНОПКИ МЕНЮ АКТИВНОЙ В СЛАЙДЕРЕ
+/// ДЕЛАЕМ КНОПКИ МЕНЮ АКТИВНЫМИ В СЛАЙДЕРЕ
 
 // 1. Находим все ссылки в нашем слайдере
 const menuLinks = document.querySelectorAll('.menu__slider-track .menu__category-button');
 
-// 2. Собираем массив ID из атрибутов href (например, ['#burgers', '#pizza', '#salads'])
+// 2. Собираем массив ID из атрибутов href (['#burgers', '#pizza', '#salads'] и т.д.)
 const targetIds = Array.from(menuLinks).map(link => link.getAttribute('href'));
 
 // 3. Находим на странице сами заголовки секций по этим ID
@@ -193,7 +193,7 @@ const sectionObserver = new IntersectionObserver((entries) => {
           link.classList.add('active');
           link.setAttribute('aria-current', 'true');
           
-          // --- БЕЗОПАСНАЯ АВТОДОКРУТКА (БЕЗ КОНФЛИКТОВ И БАГОВ) ---
+          // --- БЕЗОПАСНАЯ АВТОДОКРУТКА ---
           // Высчитываем, сколько нужно прокрутить трек, чтобы кнопка встала по центру
           const trackWidth = sliderTrack.offsetWidth;
           const linkOffsetLeft = link.offsetLeft;
@@ -347,11 +347,8 @@ document.addEventListener('DOMContentLoaded', () => {
       // 1. Сначала открываем окно
       modal.showModal();
       
-      // =====================================================================
-      // ИСПРАВЛЕНИЕ ДЛЯ SAFARI: Принудительно передаем фокус на крестик, 
-      // чтобы браузер зафиксировал курсор внутри модального окна
-      // =====================================================================
-      //closeButton.focus(); 
+      // ИСПРАВЛЕНИЕ ДЛЯ SAFARI: Принудительно передаем фокус на крестик, чтобы браузер зафиксировал курсор внутри модального окна
+      
       const mTitle = document.getElementById('modal-title');
       if (mTitle) {
         mTitle.focus();
